@@ -199,12 +199,16 @@ class CPGExtractor:
 
         # Write source to a temp directory that maps into the container
         # The docker-compose mounts the project root at /code
-        tmp_dir = Path(tempfile.mkdtemp(prefix="neuroast_cpg_"))
+        joern_tmp_dir = Path(".joern_tmp")
+        joern_tmp_dir.mkdir(exist_ok=True)
+        tmp_dir = Path(tempfile.mkdtemp(prefix="neuroast_cpg_", dir=joern_tmp_dir))
         source_path = tmp_dir / filename
         source_path.write_text(source_code)
 
         # Path as seen from inside the container
-        container_path = str(source_path)
+        # Assuming the current working directory is the project root,
+        # which is mounted at /code
+        container_path = f"/code/{source_path}"
 
         try:
             # Import the source file into Joern
@@ -347,15 +351,17 @@ class CPGExtractor:
 
         methods = []
         # Joern returns tuples — we do a regex parse for robustness
-        pattern = re.compile(r'\("([^"]*?)","([^"]*?)","([^"]*?)",(-?\d+),')
+        # It may pretty-print with newlines, so we add \s* everywhere
+        pattern = re.compile(r'\(\s*"([^"]*?)"\s*,\s*"([^"]*?)"\s*,\s*"([^"]*?)"\s*,\s*(-?\d+)\s*,\s*List\([^)]*\)\s*,\s*"([^"]*?)"\s*,\s*(true|false)\s*\)', re.DOTALL)
         for match in pattern.finditer(raw):
-            name, full_name, signature, line = match.groups()
+            name, full_name, signature, line, ret_type, is_ext = match.groups()
             methods.append(
                 CPGMethod(
                     name=name,
                     full_name=full_name,
                     signature=signature,
                     line_number=int(line),
+                    is_external=(is_ext == "true"),
                 )
             )
         return methods
@@ -366,7 +372,7 @@ class CPGExtractor:
         import re
 
         variables = []
-        pattern = re.compile(r'\("([^"]*?)","([^"]*?)",(-?\d+),"([^"]*?)"\)')
+        pattern = re.compile(r'\(\s*"([^"]*?)"\s*,\s*"([^"]*?)"\s*,\s*(-?\d+)\s*,\s*"(.*?)"\s*\)', re.DOTALL)
         for match in pattern.finditer(raw):
             name, type_name, line, code = match.groups()
             variables.append(
@@ -385,9 +391,10 @@ class CPGExtractor:
         import re
 
         calls = []
-        pattern = re.compile(r'\("([^"]*?)","([^"]*?)",(-?\d+),(\d+),"([^"]*?)"\)')
+        pattern = re.compile(r'\(\s*"([^"]*?)"\s*,\s*"([^"]*?)"\s*,\s*(-?\d+)\s*,\s*(\d+)\s*,\s*(?:"""(.*?)"""|"(.*?)")\s*\)', re.DOTALL)
         for match in pattern.finditer(raw):
-            name, method_fn, line, argc, code = match.groups()
+            name, method_fn, line, argc, code1, code2 = match.groups()
+            code = code1 if code1 is not None else code2
             calls.append(
                 CPGCall(
                     name=name,
@@ -405,7 +412,7 @@ class CPGExtractor:
         import re
 
         structures = []
-        pattern = re.compile(r'\("([^"]*?)","([^"]*?)",(-?\d+),"([^"]*?)"\)')
+        pattern = re.compile(r'\(\s*"([^"]*?)"\s*,\s*"(.*?)"\s*,\s*(-?\d+)\s*,\s*"(.*?)"\s*\)', re.DOTALL)
         for match in pattern.finditer(raw):
             cs_type, condition, line, code = match.groups()
             structures.append(
@@ -424,7 +431,7 @@ class CPGExtractor:
         import re
 
         edges = []
-        pattern = re.compile(r'\("([^"]*?)",(-?\d+),"([^"]*?)",(-?\d+),"([^"]*?)","([^"]*?)"\)')
+        pattern = re.compile(r'\(\s*"([^"]*?)"\s*,\s*(-?\d+)\s*,\s*"(.*?)"\s*,\s*(-?\d+)\s*,\s*"(.*?)"\s*,\s*"([^"]*?)"\s*\)', re.DOTALL)
         for match in pattern.finditer(raw):
             var, def_line, def_code, use_line, use_code, method = match.groups()
             edges.append(

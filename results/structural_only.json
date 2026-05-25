@@ -1,0 +1,282 @@
+{
+  "experiment": "default",
+  "timestamp": "2026-05-25T18:25:36.337380+00:00",
+  "summary": {
+    "total_programs": 16,
+    "successful_translations": 0,
+    "success_rate": 0.0,
+    "total_hallucinations": 49,
+    "hallucinations_by_category": {
+      "missing": 34,
+      "invented": 15
+    },
+    "avg_confidence": 0.8617,
+    "avg_attempts": 1.0,
+    "avg_time_ms": 0.0
+  },
+  "records": [
+    {
+      "source_file": "simple_statistics.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9412,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.317537+00:00"
+    },
+    {
+      "source_file": "cumulative_sum.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.318711+00:00"
+    },
+    {
+      "source_file": "insertion_sort.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9444,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.319812+00:00"
+    },
+    {
+      "source_file": "matrix_multiply copy.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9583,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.321829+00:00"
+    },
+    {
+      "source_file": "find_second_largest.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.323372+00:00"
+    },
+    {
+      "source_file": "linear_search.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.91,
+      "total_hallucinations": 2,
+      "structural_hallucinations": 2,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.324904+00:00"
+    },
+    {
+      "source_file": "linked_list.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.6929,
+      "total_hallucinations": 10,
+      "structural_hallucinations": 10,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 3,
+        "invented": 7
+      },
+      "timestamp": "2026-05-25T18:25:36.326631+00:00"
+    },
+    {
+      "source_file": "sieve_eratosthenes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9286,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.327701+00:00"
+    },
+    {
+      "source_file": "file_io.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.6706,
+      "total_hallucinations": 17,
+      "structural_hallucinations": 17,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 16,
+        "invented": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.330026+00:00"
+    },
+    {
+      "source_file": "stats_mean_median_mode.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.92,
+      "total_hallucinations": 3,
+      "structural_hallucinations": 3,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 2,
+        "invented": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.332222+00:00"
+    },
+    {
+      "source_file": "kadane_max_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.333004+00:00"
+    },
+    {
+      "source_file": "count_primes_range.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.9286,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.333678+00:00"
+    },
+    {
+      "source_file": "digit_product.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.8,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.334101+00:00"
+    },
+    {
+      "source_file": "fast_power.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.8,
+      "total_hallucinations": 2,
+      "structural_hallucinations": 2,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.334969+00:00"
+    },
+    {
+      "source_file": "reverse_string.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.7733,
+      "total_hallucinations": 4,
+      "structural_hallucinations": 4,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 3
+      },
+      "timestamp": "2026-05-25T18:25:36.336227+00:00"
+    },
+    {
+      "source_file": "trailing_zero_factorial.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.82,
+      "total_hallucinations": 2,
+      "structural_hallucinations": 2,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 1
+      },
+      "timestamp": "2026-05-25T18:25:36.337092+00:00"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+---
+# NeuroAST — Infrastructure Services
+# Phase 2: Joern CPG Server (Semantic Verification)
+#
+# Usage:
+#   Start:      docker compose up -d joern
+#   Stop:       docker compose down
+#   Logs:       docker compose logs -f joern
+#   Shell:      docker compose exec joern bash
+#   Status:     docker compose ps
+
+services:
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Joern CPG Server
+  #
+  # Provides a persistent HTTP server (port 8080) for Code Property Graph
+  # construction and querying. The NeuroAST Phase-2 CPG verifier connects
+  # to this service via the cpgqls-client Python library.
+  #
+  # HTTP API:
+  #   POST http://localhost:8080/query-sync   → Run a CPGQL query
+  #   GET  http://localhost:8080/             → Health check
+  # ─────────────────────────────────────────────────────────────────────────────
+  joern:
+    image: ghcr.io/joernio/joern:master
+    container_name: neuroast_joern
+
+    # Start Joern in HTTP server mode, bound to all interfaces inside the
+    # container so the host can reach it on port 8080.
+    command: >
+      joern
+      --server
+      --server-host 0.0.0.0
+      --server-port 8080
+
+    # Joern's Scala REPL requires a pseudo-TTY to initialize.
+    # Without these two settings the server silently hangs on startup.
+    stdin_open: true
+    tty: true
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      # ── Persistent workspace (CPG cache) ────────────────────────────────────
+      # Joern writes generated CPGs here. Persisting this across container
+      # restarts avoids re-generating graphs for files we have already seen.
+      - joern_workspace:/app/workspace
+
+      # ── Source code mount ────────────────────────────────────────────────────
+      # The host's project root is mounted read-only at /code inside Joern.
+      # CPGQL queries that reference files use paths like /code/tests/fixtures/...
+      # The Python client sends: importCode("/code/path/to/file.c")
+      - type: bind
+        source: .
+        target: /code
+        read_only: true
+
+    environment:
+      # JVM heap — 6 GB is reasonable for moderate codebases.
+      # Increase to 8g–12g for large datasets (CodeNet scale).
+      JAVA_OPTS: >-
+        -Xms512m
+        -Xmx6g
+        -XX:+UseG1GC
+        -XX:+HeapDumpOnOutOfMemoryError
+        -XX:HeapDumpPath=/app/workspace/oom-dump.hprof
+
+    # Restart automatically unless explicitly stopped (e.g. docker compose down).
+    # This ensures the server survives Docker daemon restarts during long
+    # benchmark runs.
+    restart: unless-stopped
+
+    # Joern's GET / returns 404 — it only serves POST /query-sync.
+    # We send a trivial CPGQL expression and check for "success":true.
+    healthcheck:
+      test:
+        - "CMD-SHELL"
+        - |
+          curl -sf -X POST http://localhost:8080/query-sync \
+            -H 'Content-Type: application/json' \
+            -d '{"query":"1+1"}' | grep -q '"success":true' || exit 1
+      interval: 15s
+      timeout: 10s
+      retries: 8
+      start_period: 90s
+
+    # Resource limits — prevents Joern from starving the host OS or the
+    # Python NeuroAST process running alongside it.
+    deploy:
+      resources:
+        limits:
+          cpus: "4"
+          memory: 7G
+        reservations:
+          cpus: "1"
+          memory: 1G
+
+    # Structured logs — helpful when reviewing benchmark runs later.
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "3"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Volumes
+# ─────────────────────────────────────────────────────────────────────────────
+volumes:
+  # Named volume — managed by Docker, survives `docker compose down`.
+  # To fully wipe the CPG cache: docker volume rm neuroast_joern_workspace
+  joern_workspace:
+    name: neuroast_joern_workspace
+    driver: local

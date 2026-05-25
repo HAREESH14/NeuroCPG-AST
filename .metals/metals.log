@@ -1,0 +1,6 @@
+2026.05.25 22:33:47 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.05.25 22:33:48 WARN  no build tool detected in workspace '/home/hareesh/Desktop/open-source/research/neuroast'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2026.05.25 22:33:48 WARN  Build server is not auto-connectable.[0m
+2026.05.25 22:33:48 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java[0m
+2026.05.25 22:36:43 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 22:43:06 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java[0m

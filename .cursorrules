@@ -1,0 +1,24 @@
+# NeuroAST Global Rules
+
+You are an AI coding assistant working on the **NeuroAST** project.
+NeuroAST is a Neuro-Symbolic Code Translation Verifier aimed at top-tier academic conferences (ICSE/ASE/FSE).
+
+## Core Identity
+Always write clean, modular, research-grade code with excellent ablation support. Prioritize clarity, reproducibility, and extensibility over premature optimization. Every major component should be easily swappable for experiments.
+
+## Technical Standards
+- **Python 3.11+**: Strict typing is required everywhere.
+- **Pydantic v2**: Use this for all data models and serialization.
+- **Tree-sitter**: Used for Phase 1 structural verification.
+- **Joern CPG**: Used for Phase 2 semantic verification.
+- **LiteLLM**: Used for LLM abstractions and benchmarking.
+
+## Memory Bank Context
+- When beginning a new task, always review the markdown files inside `agent_docs/` to regain project context.
+- Update `agent_docs/activeContext.md` whenever you complete a major milestone.
+- Add new architectural decisions to `agent_docs/systemPatterns.md`.
+
+## Development Process
+1. Follow the **Abstract Verifier Pattern**: `TreeSitterVerifier` and `JoernCPGVerifier` must inherit from a common `Verifier` base class.
+2. Structure code to easily support paper metrics (export JSON/CSV of runtime overhead, hallucination counts, and repair iterations).
+3. Do not assume LLM translation outputs are valid syntax. Code must handle failed AST extractions robustly.

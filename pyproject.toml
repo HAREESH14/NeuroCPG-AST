@@ -1,0 +1,55 @@
+[project]
+name = "neuroast"
+version = "0.1.0"
+description = "NeuroAST: A Neuro-Symbolic Framework for Measuring and Mitigating Structural Hallucinations in LLM-Based Cross-Language Code Translation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Symbolic — Phase 1 (tree-sitter structural matching)
+    "tree-sitter>=0.24",
+    "tree-sitter-c>=0.23",
+    "tree-sitter-java>=0.23",
+    # Neural — LLM abstraction
+    "litellm>=1.60",
+    # Data models & config
+    "pydantic>=2.10",
+    "pydantic-settings>=2.7",
+    # CLI
+    "typer>=0.15",
+    "rich>=13.9",
+    # Graph (for future advanced matching)
+    "networkx>=3.3",
+    "cpgqls-client",
+    "cpggen"
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "pytest-asyncio>=0.25",
+    "ruff>=0.15.14",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neuroast"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true

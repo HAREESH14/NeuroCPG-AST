@@ -1,0 +1,58 @@
+# ─── Secrets (NEVER commit real credentials) ──────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+*.so
+
+# ─── Virtual environments ───────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── Testing & coverage ────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ─── Linting & type checking ───────────────────────────────────────────────────
+.ruff_cache/
+.mypy_cache/
+
+# ─── IDEs ──────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Agent / AI memory (local context, not research artifacts) ─────────────────
+.agents/
+
+# ─── Docker / Joern ────────────────────────────────────────────────────────────
+# Do NOT ignore docker-compose.yml — it must be committed.
+workspace/
+cpg_out/
+*.hprof
+
+# ─── Research data (potentially large — keep out of git) ───────────────────────
+benchmarks/datasets/*.c
+benchmarks/datasets/*.java
+benchmarks/results/*.json
+benchmarks/results/*.csv
+
+
+graphify-out/

@@ -93,9 +93,7 @@ class StructuralMatcher:
 
         # ── Calculate confidence ────────────────────────────────────────────
         total_elements = max(source.total_elements, 1)
-        weighted_penalty = sum(
-            self.weights.get(h.category.value, 1.0) for h in hallucinations
-        )
+        weighted_penalty = sum(self.weights.get(h.category.value, 1.0) for h in hallucinations)
         confidence = max(0.0, 1.0 - weighted_penalty / total_elements)
 
         is_aligned = confidence >= self.confidence_threshold and len(hallucinations) == 0

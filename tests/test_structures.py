@@ -12,7 +12,6 @@ from neuroast.verification.structures import (
     TranslationAttempt,
 )
 
-
 # ─────────────────────────────────────────────────────────────────────────────
 # ControlFlowNode
 # ─────────────────────────────────────────────────────────────────────────────
@@ -31,9 +30,7 @@ class TestControlFlowNode:
     def test_nested_depth(self) -> None:
         """Depth should reflect the deepest nesting level."""
         inner = ControlFlowNode(node_type=ControlFlowNodeType.RETURN, line=10)
-        loop = ControlFlowNode(
-            node_type=ControlFlowNodeType.FOR_LOOP, line=8, children=[inner]
-        )
+        loop = ControlFlowNode(node_type=ControlFlowNodeType.FOR_LOOP, line=8, children=[inner])
         func = ControlFlowNode(
             node_type=ControlFlowNodeType.FUNCTION, name="main", line=1, children=[loop]
         )

@@ -14,18 +14,17 @@ Research Contributions Supported:
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from typing import Literal
 
 from pydantic import BaseModel, Field
-
 
 # =============================================================================
 # Phase 1: Structural (tree-sitter) Models
 # =============================================================================
 
 
-class ControlFlowNodeType(str, Enum):
+class ControlFlowNodeType(StrEnum):
     """Types of structural elements extracted from source code.
 
     These are language-agnostic — both C and Java map into these types.
@@ -133,7 +132,7 @@ class ControlFlowGraph(BaseModel):
 # =============================================================================
 
 
-class HallucinationCategory(str, Enum):
+class HallucinationCategory(StrEnum):
     """Classification of detected structural/semantic mismatches.
 
     Three tiers of hallucination classification — this taxonomy is itself
@@ -204,7 +203,7 @@ class HallucinationCategory(str, Enum):
         }
 
 
-class HallucinationSeverity(str, Enum):
+class HallucinationSeverity(StrEnum):
     """Severity level of a detected hallucination."""
 
     CRITICAL = "critical"  # Definitely changes program semantics
@@ -306,7 +305,7 @@ class AlignmentReport(BaseModel):
 # =============================================================================
 
 
-class VariableRole(str, Enum):
+class VariableRole(StrEnum):
     """Normalized role of a variable in the program dependence graph.
 
     Part of the NormPDG normalization scheme (RC1). Variables are classified

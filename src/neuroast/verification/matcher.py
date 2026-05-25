@@ -24,6 +24,8 @@ from neuroast.verification.structures import (
     ControlFlowGraph,
     ControlFlowNode,
     Hallucination,
+    HallucinationCategory,
+    HallucinationSeverity,
 )
 
 logger = logging.getLogger(__name__)
@@ -41,7 +43,7 @@ class StructuralMatcher:
     confidence_threshold:
         Minimum confidence score for the report to be marked ``is_aligned=True``.
     weights:
-        Severity weights for each hallucination category.
+        Severity weights for each hallucination category (string key → float).
     """
 
     def __init__(
@@ -91,12 +93,10 @@ class StructuralMatcher:
 
         # ── Calculate confidence ────────────────────────────────────────────
         total_elements = max(source.total_elements, 1)
-        weighted_penalty = sum(self.weights.get(h.category, 1.0) for h in hallucinations)
+        weighted_penalty = sum(
+            self.weights.get(h.category.value, 1.0) for h in hallucinations
+        )
         confidence = max(0.0, 1.0 - weighted_penalty / total_elements)
-
-        # Apply severity to each hallucination.
-        for h in hallucinations:
-            h.severity = self.weights.get(h.category, 1.0)
 
         is_aligned = confidence >= self.confidence_threshold and len(hallucinations) == 0
 
@@ -106,6 +106,7 @@ class StructuralMatcher:
             source_summary=source_summary,
             target_summary=target_summary,
             confidence=round(confidence, 4),
+            phase="structural",
         )
 
         logger.info(
@@ -181,13 +182,15 @@ class StructuralMatcher:
             s_func = source_funcs[i]
             hallucinations.append(
                 Hallucination(
-                    category="missing",
+                    category=HallucinationCategory.MISSING,
+                    severity=HallucinationSeverity.CRITICAL,
                     node_type="function",
                     source_location=f"{s_func.name}:{s_func.line}",
                     description=(
                         f"Function '{s_func.name}' at line {s_func.line} in source "
                         f"has no corresponding method in the target."
                     ),
+                    phase_detected="structural",
                 )
             )
 
@@ -196,13 +199,15 @@ class StructuralMatcher:
             t_func = target_funcs[i]
             hallucinations.append(
                 Hallucination(
-                    category="invented",
+                    category=HallucinationCategory.INVENTED,
+                    severity=HallucinationSeverity.WARNING,
                     node_type="function",
                     target_location=f"{t_func.name}:{t_func.line}",
                     description=(
                         f"Method '{t_func.name}' at line {t_func.line} in target "
                         f"has no corresponding function in the source."
                     ),
+                    phase_detected="structural",
                 )
             )
 
@@ -257,14 +262,16 @@ class StructuralMatcher:
                 for _ in range(diff):
                     hallucinations.append(
                         Hallucination(
-                            category="missing",
+                            category=HallucinationCategory.MISSING,
+                            severity=HallucinationSeverity.CRITICAL,
                             node_type=node_type,
-                            source_location=f"{func_name}",
+                            source_location=func_name,
                             description=(
                                 f"Source function '{func_name}' has {s_count} "
                                 f"{node_type}(s) but target has only {t_count}. "
                                 f"{diff} {node_type}(s) missing."
                             ),
+                            phase_detected="structural",
                         )
                     )
             elif t_count > s_count:
@@ -273,14 +280,16 @@ class StructuralMatcher:
                 for _ in range(diff):
                     hallucinations.append(
                         Hallucination(
-                            category="invented",
+                            category=HallucinationCategory.INVENTED,
+                            severity=HallucinationSeverity.WARNING,
                             node_type=node_type,
-                            target_location=f"{target.name or func_name}",
+                            target_location=target.name or func_name,
                             description=(
                                 f"Target method '{target.name or func_name}' has "
                                 f"{t_count} {node_type}(s) but source has only "
                                 f"{s_count}. {diff} {node_type}(s) were invented."
                             ),
+                            phase_detected="structural",
                         )
                     )
 
@@ -290,14 +299,16 @@ class StructuralMatcher:
         if abs(s_depth - t_depth) >= 1:
             hallucinations.append(
                 Hallucination(
-                    category="depth_mismatch",
+                    category=HallucinationCategory.DEPTH_MISMATCH,
+                    severity=HallucinationSeverity.WARNING,
                     node_type="function",
-                    source_location=f"{func_name}",
-                    target_location=f"{target.name or func_name}",
+                    source_location=func_name,
+                    target_location=target.name or func_name,
                     description=(
                         f"Nesting depth mismatch in '{func_name}': "
                         f"source depth={s_depth}, target depth={t_depth}."
                     ),
+                    phase_detected="structural",
                 )
             )
 

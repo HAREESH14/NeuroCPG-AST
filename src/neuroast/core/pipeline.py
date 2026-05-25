@@ -14,6 +14,7 @@ This implements Pillar N3 (Neuro-Symbolic Repair Loop).
 from __future__ import annotations
 
 import logging
+import time
 from typing import Literal
 
 from neuroast.core.config import NeuroASTSettings
@@ -21,7 +22,11 @@ from neuroast.neural.repair import RepairAgent
 from neuroast.neural.translator import Translator
 from neuroast.symbolic.extractor import StructuralExtractor
 from neuroast.verification.matcher import StructuralMatcher
-from neuroast.verification.structures import AlignmentReport, PipelineResult
+from neuroast.verification.structures import (
+    AlignmentReport,
+    PipelineResult,
+    TranslationAttempt,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -79,8 +84,10 @@ class VerificationPipeline:
         PipelineResult
             Complete audit trail with all intermediate reports.
         """
-        reports: list[AlignmentReport] = []
+        pipeline_start = time.perf_counter()
+        attempt_history: list[TranslationAttempt] = []
         java_code = ""
+        last_report: AlignmentReport | None = None
 
         # Extract source CFG once (it doesn't change between iterations).
         source_cfg = self.c_extractor.extract(c_source)
@@ -90,18 +97,22 @@ class VerificationPipeline:
             source_cfg.total_elements,
         )
 
-        for attempt in range(1, self.settings.max_retries + 1):
-            logger.info("── Attempt %d/%d ──", attempt, self.settings.max_retries)
+        for attempt_num in range(1, self.settings.max_retries + 1):
+            logger.info("── Attempt %d/%d ──", attempt_num, self.settings.max_retries)
+
+            repair_prompt: str | None = None
 
             # Phase 1: Translate (or repair)
-            if attempt == 1:
+            if attempt_num == 1:
                 java_code = await self.translator.translate(c_source)
             else:
                 # Use the last report for targeted repair.
+                assert last_report is not None
+                repair_prompt = last_report.format_for_repair_prompt()
                 java_code = await self.repair_agent.repair(
                     source_code=c_source,
                     previous_translation=java_code,
-                    report=reports[-1],
+                    report=last_report,
                 )
 
             # Phase 2: Extract target CFG
@@ -114,7 +125,18 @@ class VerificationPipeline:
 
             # Phase 3: Compare (deterministic)
             report = self.matcher.match(source_cfg, target_cfg)
-            reports.append(report)
+            last_report = report
+
+            # Record this attempt
+            attempt_history.append(
+                TranslationAttempt(
+                    attempt_number=attempt_num,
+                    java_code=java_code,
+                    target_cfg=target_cfg,
+                    alignment_report=report,
+                    repair_prompt=repair_prompt,
+                )
+            )
 
             logger.info(
                 "Verification: aligned=%s, confidence=%.2f, hallucinations=%d",
@@ -124,13 +146,17 @@ class VerificationPipeline:
             )
 
             if report.is_aligned:
+                total_time = (time.perf_counter() - pipeline_start) * 1000
                 return PipelineResult(
                     success=True,
                     source_code=c_source,
                     java_code=java_code,
-                    attempts=attempt,
-                    reports=reports,
+                    attempts=attempt_num,
+                    source_cfg=source_cfg,
+                    final_report=report,
+                    attempt_history=attempt_history,
                     model=self.settings.model,
+                    total_time_ms=total_time,
                 )
 
         # Exhausted all retries.
@@ -138,12 +164,17 @@ class VerificationPipeline:
             "Failed to achieve alignment after %d attempts",
             self.settings.max_retries,
         )
+        total_time = (time.perf_counter() - pipeline_start) * 1000
+        assert last_report is not None
 
         return PipelineResult(
             success=False,
             source_code=c_source,
             java_code=java_code,
             attempts=self.settings.max_retries,
-            reports=reports,
+            source_cfg=source_cfg,
+            final_report=last_report,
+            attempt_history=attempt_history,
             model=self.settings.model,
+            total_time_ms=total_time,
         )

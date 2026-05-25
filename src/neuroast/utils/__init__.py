@@ -1,1 +1,1 @@
-"""NeuroAST utils — metrics collection and experiment infrastructure."""
+"""Utilities module — metrics collection, logging, and experiment support."""

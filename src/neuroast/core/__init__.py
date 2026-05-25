@@ -1,1 +1,1 @@
-"""NeuroAST core — pipeline orchestration and configuration."""
+"""Core module — configuration and pipeline orchestration."""

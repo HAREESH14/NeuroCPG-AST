@@ -1,1 +1,1 @@
-# NeuroAST tests
+"""NeuroAST test suite."""

@@ -1,1 +1,1 @@
-"""NeuroAST symbolic — tree-sitter based structural extraction."""
+"""Symbolic module — tree-sitter and Joern CPG extraction."""

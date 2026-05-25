@@ -4,3 +4,18 @@
 2026.05.25 22:33:48 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java[0m
 2026.05.25 22:36:43 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
 2026.05.25 22:43:06 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java[0m
+2026.05.25 22:46:06 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:02 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java[0m
+2026.05.25 23:14:07 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java[0m
+2026.05.25 23:14:07 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:08 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:07 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:09 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:09 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:09 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java[0m
+2026.05.25 23:14:09 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:09 INFO  Created report: Optional[file:///home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java][0m
+2026.05.25 23:14:09 INFO  QDox parse error in file:///home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java (full report at: "/home/hareesh/Desktop/open-source/research/neuroast/.metals/.reports/metals-full/2026-05-25/r_qdox-error_23-14-09-558.md")[0m
+2026.05.25 23:14:09 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:24 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:14:27 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m

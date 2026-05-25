@@ -71,13 +71,15 @@ def verify(
 
     # Display result.
     if result.success:
-        conf = result.final_confidence
+        conf = result.final_report.confidence
         console.print(f"\n[bold green]✅ Verified![/bold green] Confidence: {conf:.2f}")
         console.print(f"   Attempts: {result.attempts}")
     else:
+        conf = result.final_report.confidence
+        n_hall = len(result.final_report.hallucinations)
         console.print(f"\n[bold red]❌ Failed[/bold red] after {result.attempts} attempts")
-        console.print(f"   Final confidence: {result.final_confidence:.2f}")
-        console.print(f"   Hallucinations found: {result.total_hallucinations_found}")
+        console.print(f"   Final confidence: {conf:.2f}")
+        console.print(f"   Hallucinations found: {n_hall}")
 
     # Show Java output.
     console.print("\n[bold]Generated Java:[/bold]")

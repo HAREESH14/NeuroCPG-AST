@@ -1,1 +1,1 @@
-"""NeuroAST neural — LLM translation, repair, and prompt management."""
+"""Neural module — LLM translation and targeted repair."""

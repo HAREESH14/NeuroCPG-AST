@@ -1,8 +1,7 @@
-import sys
 import logging
 from pathlib import Path
+
 from neuroast.verification.joern_client import joern_session
-from neuroast.symbolic.cpg_extractor import CPGExtractor
 
 logging.basicConfig(level=logging.INFO)
 

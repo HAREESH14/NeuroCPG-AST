@@ -1,7 +1,7 @@
-import os
 import asyncio
-from pathlib import Path
 import logging
+from pathlib import Path
+
 from neuroast.neural.translator import Translator
 
 logging.basicConfig(level=logging.INFO)

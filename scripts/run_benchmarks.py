@@ -1,12 +1,8 @@
-import sys
-import json
 import logging
-import asyncio
 from pathlib import Path
-from dataclasses import asdict
 
-from neuroast.verification.progressive_verifier import ProgressiveVerifier
 from neuroast.utils.metrics import MetricsCollector
+from neuroast.verification.progressive_verifier import ProgressiveVerifier
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

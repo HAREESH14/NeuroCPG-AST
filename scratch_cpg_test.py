@@ -1,10 +1,9 @@
-import sys
 import logging
 from pathlib import Path
+
 from neuroast.symbolic.cpg_extractor import CPGExtractor
 from neuroast.symbolic.normalizer import CPGNormalizer
 from neuroast.verification.semantic_matcher import SemanticMatcher
-from neuroast.verification.structures import SemanticAlignmentReport
 
 logging.basicConfig(level=logging.INFO)
 

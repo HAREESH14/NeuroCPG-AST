@@ -19,3 +19,50 @@
 2026.05.25 23:14:09 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
 2026.05.25 23:14:24 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
 2026.05.25 23:14:27 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/datasets/Main.java. Using fallback presentation compiler.[0m
+2026.05.25 23:18:45 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java[0m
+2026.05.25 23:18:45 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:18:45 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:18:45 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:18:45 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:18:45 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:18:45 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:05 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java[0m
+2026.05.25 23:54:05 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:05 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:06 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:07 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:06 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:06 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:10 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/cumulative_sum.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:10 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java[0m
+2026.05.25 23:54:10 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:10 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:10 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:10 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:10 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:11 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:27 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:27 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:56 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/simple_statistics.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:56 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java[0m
+2026.05.25 23:54:56 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:56 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:56 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:57 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:54:57 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:55:00 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:55:00 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:55:03 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:55:07 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.25 23:55:46 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/benchmarks/results/groq_llama-3.3-70b-versatile/matrix_multiply copy.java. Using fallback presentation compiler.[0m
+2026.05.26 00:23:07 INFO  Shutting down server[0m
+2026.05.26 00:23:07 INFO  Memory monitor stopped[0m
+2026.05.26 00:23:07 INFO  shutting down Metals[0m
+2026.05.26 00:23:07 INFO  Exiting server[0m
+2026.05.26 10:39:32 INFO  Started: Metals version 1.6.7 in folders '/home/hareesh/Desktop/open-source/research/neuroast' for client Antigravity 1.107.0.[0m
+2026.05.26 10:39:32 INFO  Memory monitor started[0m
+2026.05.26 10:39:33 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.05.26 10:39:33 WARN  no build tool detected in workspace '/home/hareesh/Desktop/open-source/research/neuroast'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+2026.05.26 10:39:33 WARN  Build server is not auto-connectable.[0m
+2026.05.26 10:39:33 WARN  no build target for: /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java[0m
+2026.05.26 10:42:26 INFO  no build target found for /home/hareesh/Desktop/open-source/research/neuroast/tests/fixtures/sample_bubble_sort.java. Using fallback presentation compiler.[0m

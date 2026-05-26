@@ -19,6 +19,8 @@ dependencies = [
     # CLI
     "typer>=0.15",
     "rich>=13.9",
+    "pandas>=3.0.3",
+    "tabulate>=0.10.0",
 ]
 
 [project.scripts]

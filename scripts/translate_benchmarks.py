@@ -15,7 +15,7 @@ async def translate_all():
     
     translator = Translator(model=models[0], temperature=0.1)
     
-    c_files = list(benchmarks_dir.glob("*.c"))
+    c_files = list(benchmarks_dir.glob("*.c"))[:200]
     logger.info(f"Found {len(c_files)} C files to translate.")
     
     for model in models:
@@ -46,7 +46,7 @@ async def translate_all():
                         await asyncio.sleep(10)
             
             # Sleep between requests to pace them out and respect TPM
-            await asyncio.sleep(6)
+            await asyncio.sleep(0.5)
 
 if __name__ == "__main__":
     asyncio.run(translate_all())

@@ -1,20 +1,206 @@
 {
   "experiment": "default",
-  "timestamp": "2026-05-25T18:30:03.744174+00:00",
+  "timestamp": "2026-05-26T06:36:25.651456+00:00",
   "summary": {
-    "total_programs": 48,
-    "successful_translations": 42,
-    "success_rate": 0.875,
-    "total_hallucinations": 9,
+    "total_programs": 76,
+    "successful_translations": 66,
+    "success_rate": 0.8684,
+    "total_hallucinations": 26,
     "hallucinations_by_category": {
-      "invalid_type_transform": 5,
-      "lost_control_dep": 4
+      "lost_control_dep": 15,
+      "data_flow_invention": 5,
+      "missing": 1,
+      "invalid_type_transform": 5
     },
-    "avg_confidence": 0.9803,
+    "avg_confidence": 0.9701,
     "avg_attempts": 1.0,
     "avg_time_ms": 0.0
   },
   "records": [
+    {
+      "source_file": "codenet_c_0277.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:31:30.869167+00:00"
+    },
+    {
+      "source_file": "codenet_c_0561.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:31:36.624627+00:00"
+    },
+    {
+      "source_file": "2322_minimum_score_after_removals_on_a_tree.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.775,
+      "total_hallucinations": 2,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 2,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "lost_control_dep": 2
+      },
+      "timestamp": "2026-05-26T06:31:43.445753+00:00"
+    },
+    {
+      "source_file": "codenet_c_0412.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:31:48.242378+00:00"
+    },
+    {
+      "source_file": "2294_partition_array_such_that_maximum_difference_is_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:31:52.294631+00:00"
+    },
+    {
+      "source_file": "1400_construct_k_palindrome_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:31:57.730970+00:00"
+    },
+    {
+      "source_file": "2397_maximum_rows_covered_by_columns.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:01.881370+00:00"
+    },
+    {
+      "source_file": "1486_xor_operation_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:06.049248+00:00"
+    },
+    {
+      "source_file": "962_maximum_width_ramp.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:10.742203+00:00"
+    },
+    {
+      "source_file": "1362_closest_divisors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:15.157194+00:00"
+    },
+    {
+      "source_file": "2317_maximum_xor_after_operations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:19.021295+00:00"
+    },
+    {
+      "source_file": "2274_maximum_consecutive_floors_without_special_floors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:23.260917+00:00"
+    },
+    {
+      "source_file": "1780_check_if_number_is_a_sum_of_powers_of_three.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:27.096745+00:00"
+    },
     {
       "source_file": "simple_statistics.c",
       "model": "groq_llama-3.3-70b-versatile",
@@ -27,7 +213,226 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:25:42.701383+00:00"
+      "timestamp": "2026-05-26T06:32:30.871260+00:00"
+    },
+    {
+      "source_file": "944_delete_columns_to_make_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:34.529395+00:00"
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:38.261615+00:00"
+    },
+    {
+      "source_file": "2524_maximum_frequency_score_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:42.177688+00:00"
+    },
+    {
+      "source_file": "696_count_binary_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:45.763213+00:00"
+    },
+    {
+      "source_file": "2089_find_target_indices_after_sorting_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:49.469874+00:00"
+    },
+    {
+      "source_file": "1200_minimum_absolute_difference.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.775,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 1,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "lost_control_dep": 1
+      },
+      "timestamp": "2026-05-26T06:32:53.392974+00:00"
+    },
+    {
+      "source_file": "2518_number_of_great_partitions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:32:57.070198+00:00"
+    },
+    {
+      "source_file": "1536_minimum_swaps_to_arrange_a_binary_grid.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:33:00.746054+00:00"
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:33:04.429596+00:00"
+    },
+    {
+      "source_file": "718_maximum_length_of_repeated_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:33:07.957773+00:00"
+    },
+    {
+      "source_file": "743_network_delay_time.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.5533,
+      "total_hallucinations": 8,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 7,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "lost_control_dep": 4,
+        "data_flow_invention": 3,
+        "missing": 1
+      },
+      "timestamp": "2026-05-26T06:33:12.028473+00:00"
+    },
+    {
+      "source_file": "504_base_7.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:33:15.773585+00:00"
+    },
+    {
+      "source_file": "115_distinct_subsequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:33:19.457894+00:00"
+    },
+    {
+      "source_file": "2581_count_number_of_possible_root_nodes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.5714,
+      "total_hallucinations": 6,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 6,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {
+        "lost_control_dep": 4,
+        "data_flow_invention": 2
+      },
+      "timestamp": "2026-05-26T06:33:23.409577+00:00"
+    },
+    {
+      "source_file": "1380_lucky_numbers_in_a_matrix.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "success": true,
+      "attempts": 1,
+      "final_confidence": 1.0,
+      "total_hallucinations": 0,
+      "structural_hallucinations": 0,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.0,
+      "hallucination_categories": {},
+      "timestamp": "2026-05-26T06:33:27.251900+00:00"
     },
     {
       "source_file": "cumulative_sum.c",
@@ -41,7 +446,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:25:48.960710+00:00"
+      "timestamp": "2026-05-26T06:33:30.926700+00:00"
     },
     {
       "source_file": "insertion_sort.c",
@@ -55,7 +460,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:25:55.181120+00:00"
+      "timestamp": "2026-05-26T06:33:34.632110+00:00"
     },
     {
       "source_file": "matrix_multiply copy.c",
@@ -69,7 +474,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:01.332964+00:00"
+      "timestamp": "2026-05-26T06:33:38.563634+00:00"
     },
     {
       "source_file": "find_second_largest.c",
@@ -83,7 +488,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:07.405006+00:00"
+      "timestamp": "2026-05-26T06:33:42.153115+00:00"
     },
     {
       "source_file": "linear_search.c",
@@ -97,7 +502,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:13.187449+00:00"
+      "timestamp": "2026-05-26T06:33:45.863284+00:00"
     },
     {
       "source_file": "linked_list.c",
@@ -114,7 +519,7 @@
         "invalid_type_transform": 2,
         "lost_control_dep": 1
       },
-      "timestamp": "2026-05-25T18:26:19.401075+00:00"
+      "timestamp": "2026-05-26T06:33:49.634923+00:00"
     },
     {
       "source_file": "sieve_eratosthenes.c",
@@ -128,7 +533,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:26.074622+00:00"
+      "timestamp": "2026-05-26T06:33:53.395467+00:00"
     },
     {
       "source_file": "file_io.c",
@@ -144,7 +549,7 @@
       "hallucination_categories": {
         "invalid_type_transform": 2
       },
-      "timestamp": "2026-05-25T18:26:32.465609+00:00"
+      "timestamp": "2026-05-26T06:33:57.395431+00:00"
     },
     {
       "source_file": "stats_mean_median_mode.c",
@@ -160,7 +565,7 @@
       "hallucination_categories": {
         "lost_control_dep": 1
       },
-      "timestamp": "2026-05-25T18:26:40.510978+00:00"
+      "timestamp": "2026-05-26T06:34:01.366278+00:00"
     },
     {
       "source_file": "kadane_max_subarray.c",
@@ -174,7 +579,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:46.623469+00:00"
+      "timestamp": "2026-05-26T06:34:05.166973+00:00"
     },
     {
       "source_file": "count_primes_range.c",
@@ -188,7 +593,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:51.840242+00:00"
+      "timestamp": "2026-05-26T06:34:08.961947+00:00"
     },
     {
       "source_file": "digit_product.c",
@@ -202,7 +607,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:26:56.108419+00:00"
+      "timestamp": "2026-05-26T06:34:12.559491+00:00"
     },
     {
       "source_file": "fast_power.c",
@@ -216,7 +621,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:00.955911+00:00"
+      "timestamp": "2026-05-26T06:34:16.322997+00:00"
     },
     {
       "source_file": "reverse_string.c",
@@ -230,7 +635,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:05.514833+00:00"
+      "timestamp": "2026-05-26T06:34:20.656551+00:00"
     },
     {
       "source_file": "trailing_zero_factorial.c",
@@ -244,7 +649,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:10.074172+00:00"
+      "timestamp": "2026-05-26T06:34:24.553143+00:00"
     },
     {
       "source_file": "all_features.c",
@@ -260,7 +665,7 @@
       "hallucination_categories": {
         "lost_control_dep": 1
       },
-      "timestamp": "2026-05-25T18:27:15.250520+00:00"
+      "timestamp": "2026-05-26T06:34:28.745414+00:00"
     },
     {
       "source_file": "is_prime_simple.c",
@@ -274,7 +679,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:20.112864+00:00"
+      "timestamp": "2026-05-26T06:34:32.445056+00:00"
     },
     {
       "source_file": "gcd_euclid.c",
@@ -288,7 +693,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:25.426220+00:00"
+      "timestamp": "2026-05-26T06:34:36.110884+00:00"
     },
     {
       "source_file": "merge_sort.c",
@@ -304,7 +709,7 @@
       "hallucination_categories": {
         "invalid_type_transform": 1
       },
-      "timestamp": "2026-05-25T18:27:31.156353+00:00"
+      "timestamp": "2026-05-26T06:34:40.008183+00:00"
     },
     {
       "source_file": "pow_fast.c",
@@ -318,7 +723,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:35.823325+00:00"
+      "timestamp": "2026-05-26T06:34:43.773903+00:00"
     },
     {
       "source_file": "prime_sieve.c",
@@ -332,7 +737,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:40.896316+00:00"
+      "timestamp": "2026-05-26T06:34:47.574207+00:00"
     },
     {
       "source_file": "matrix_transpose.c",
@@ -346,7 +751,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:45.460536+00:00"
+      "timestamp": "2026-05-26T06:34:51.355799+00:00"
     },
     {
       "source_file": "is_prime_batch.c",
@@ -360,7 +765,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:50.562240+00:00"
+      "timestamp": "2026-05-26T06:34:55.180962+00:00"
     },
     {
       "source_file": "factorial_recursive.c",
@@ -374,7 +779,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:27:55.509308+00:00"
+      "timestamp": "2026-05-26T06:34:58.905410+00:00"
     },
     {
       "source_file": "factorial_tail_recursive.c",
@@ -388,7 +793,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:00.648893+00:00"
+      "timestamp": "2026-05-26T06:35:02.532815+00:00"
     },
     {
       "source_file": "palindrome_number.c",
@@ -402,7 +807,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:05.146266+00:00"
+      "timestamp": "2026-05-26T06:35:06.297574+00:00"
     },
     {
       "source_file": "merge_sort copy.c",
@@ -416,7 +821,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:10.455766+00:00"
+      "timestamp": "2026-05-26T06:35:10.076198+00:00"
     },
     {
       "source_file": "decimal_to_binary.c",
@@ -430,7 +835,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:15.675243+00:00"
+      "timestamp": "2026-05-26T06:35:13.779203+00:00"
     },
     {
       "source_file": "bubble_sort.c",
@@ -444,7 +849,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:21.429448+00:00"
+      "timestamp": "2026-05-26T06:35:17.375940+00:00"
     },
     {
       "source_file": "calculator.c",
@@ -460,7 +865,7 @@
       "hallucination_categories": {
         "lost_control_dep": 1
       },
-      "timestamp": "2026-05-25T18:28:29.850761+00:00"
+      "timestamp": "2026-05-26T06:35:21.098639+00:00"
     },
     {
       "source_file": "armstrong_numbers.c",
@@ -474,7 +879,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:37.836880+00:00"
+      "timestamp": "2026-05-26T06:35:24.738578+00:00"
     },
     {
       "source_file": "sum_and_average.c",
@@ -488,7 +893,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:46.300753+00:00"
+      "timestamp": "2026-05-26T06:35:28.457464+00:00"
     },
     {
       "source_file": "fibonacci_dp.c",
@@ -502,7 +907,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:51.131104+00:00"
+      "timestamp": "2026-05-26T06:35:32.042767+00:00"
     },
     {
       "source_file": "rotate_array.c",
@@ -516,7 +921,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:28:55.820645+00:00"
+      "timestamp": "2026-05-26T06:35:35.786215+00:00"
     },
     {
       "source_file": "gcd_lcm.c",
@@ -530,7 +935,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:00.670293+00:00"
+      "timestamp": "2026-05-26T06:35:39.708064+00:00"
     },
     {
       "source_file": "count_vowels_and_consonants.c",
@@ -544,7 +949,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:05.196727+00:00"
+      "timestamp": "2026-05-26T06:35:43.661350+00:00"
     },
     {
       "source_file": "matrix_multiply.c",
@@ -558,7 +963,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:11.125390+00:00"
+      "timestamp": "2026-05-26T06:35:47.612273+00:00"
     },
     {
       "source_file": "palindrome_check.c",
@@ -572,7 +977,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:15.809168+00:00"
+      "timestamp": "2026-05-26T06:35:51.529467+00:00"
     },
     {
       "source_file": "test_goto.c",
@@ -586,7 +991,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:20.216734+00:00"
+      "timestamp": "2026-05-26T06:35:55.070692+00:00"
     },
     {
       "source_file": "binary_search copy.c",
@@ -600,7 +1005,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:25.296574+00:00"
+      "timestamp": "2026-05-26T06:35:58.756269+00:00"
     },
     {
       "source_file": "sum_of_digits.c",
@@ -614,7 +1019,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:31.225303+00:00"
+      "timestamp": "2026-05-26T06:36:02.493470+00:00"
     },
     {
       "source_file": "frequency_count.c",
@@ -628,7 +1033,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:36.887464+00:00"
+      "timestamp": "2026-05-26T06:36:06.055730+00:00"
     },
     {
       "source_file": "selection_sort.c",
@@ -642,7 +1047,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:41.589887+00:00"
+      "timestamp": "2026-05-26T06:36:10.079481+00:00"
     },
     {
       "source_file": "quick_sort.c",
@@ -656,7 +1061,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:46.592394+00:00"
+      "timestamp": "2026-05-26T06:36:14.066286+00:00"
     },
     {
       "source_file": "matrix_det_2x2.c",
@@ -670,7 +1075,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:52.273572+00:00"
+      "timestamp": "2026-05-26T06:36:17.767859+00:00"
     },
     {
       "source_file": "binary_search.c",
@@ -684,7 +1089,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:29:58.123692+00:00"
+      "timestamp": "2026-05-26T06:36:21.919991+00:00"
     },
     {
       "source_file": "string_processing.c",
@@ -698,7 +1103,7 @@
       "tolerated_idioms": 0,
       "total_time_ms": 0.0,
       "hallucination_categories": {},
-      "timestamp": "2026-05-25T18:30:03.742035+00:00"
+      "timestamp": "2026-05-26T06:36:25.650938+00:00"
     }
   ]
 }

@@ -126,12 +126,7 @@ neuroast/
 │   ├── test_normalizer.py      # NormPDG normalization tests
 │   ├── test_structures.py      # Data model tests
 │   └── test_metrics.py         # Metric computation tests
-│
-├── Paper/                      # IEEE conference manuscript (LaTeX)
-│   ├── main.tex
-│   ├── Sections/
-│   └── ref.bib
-│
+|
 ├── docker-compose.yml          # Joern CPG server (Phase 2)
 ├── pyproject.toml              # Project metadata and dependencies
 ├── Makefile                    # Task automation

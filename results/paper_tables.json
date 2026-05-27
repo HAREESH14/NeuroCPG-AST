@@ -1,18 +1,15 @@
 {
   "table1_models": [
-    "none",
+    "llm_judge_baseline",
     "none_groq_llama-3.3-70b-versatile",
     "none_ollama_llama3.1_8b",
     "none_ollama_qwen2.5-coder_7b",
-    "progressive",
     "progressive_groq_llama-3.3-70b-versatile",
     "progressive_ollama_llama3.1_8b",
     "progressive_ollama_qwen2.5-coder_7b",
-    "semantic_only",
     "semantic_only_groq_llama-3.3-70b-versatile",
     "semantic_only_ollama_llama3.1_8b",
     "semantic_only_ollama_qwen2.5-coder_7b",
-    "structural_only",
     "structural_only_groq_llama-3.3-70b-versatile",
     "structural_only_ollama_llama3.1_8b",
     "structural_only_ollama_qwen2.5-coder_7b"
@@ -25,14 +22,11 @@
     "results/structural_only_groq_llama-3.3-70b-versatile.json",
     "results/semantic_only_ollama_llama3.1_8b.json",
     "results/progressive_ollama_llama3.1_8b.json",
-    "results/semantic_only.json",
-    "results/none.json",
     "results/semantic_only_groq_llama-3.3-70b-versatile.json",
     "results/none_ollama_llama3.1_8b.json",
     "results/structural_only_ollama_llama3.1_8b.json",
     "results/progressive_groq_llama-3.3-70b-versatile.json",
-    "results/structural_only.json",
-    "results/progressive.json",
+    "results/llm_judge_baseline.json",
     "results/none_groq_llama-3.3-70b-versatile.json"
   ]
 }

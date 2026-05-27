@@ -58,3 +58,12 @@ benchmarks/results/*.csv
 graphify-out/
 
 benchmarks/results/groq_llama_3.3_70b_versatile/
+
+Paper/
+antiaudit/
+*.pdf
+*.csv
+*.log
+*.java
+research_review.md
+research_roadmap.md

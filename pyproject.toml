@@ -11,6 +11,9 @@ dependencies = [
     "tree-sitter-java>=0.23",
     # Symbolic — Phase 2 (Joern CPG)
     "networkx>=3.3",
+    "cpgqls-client",
+    # Similarity metrics (Phase 1 tree edit distance)
+    "zss>=1.2",
     # Neural (LLM routing)
     "litellm>=1.60",
     # Data models & config

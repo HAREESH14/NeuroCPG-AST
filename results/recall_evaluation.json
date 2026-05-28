@@ -1,0 +1,5465 @@
+{
+  "experiment": "recall_evaluation",
+  "methodology": "AST-directed synthetic hallucination injection via tree-sitter",
+  "corpus_size": 71,
+  "mutator_categories": [
+    "MISSING",
+    "INVENTED",
+    "DEPTH_MISMATCH",
+    "LOST_DATA_DEP",
+    "REORDER_STMTS",
+    "ALGO_REPLACE"
+  ],
+  "summary": {
+    "total_injected": 411,
+    "total_detected": 249,
+    "overall_recall": 0.6058,
+    "total_failed_injections": 15
+  },
+  "recall_by_category": {
+    "MISSING": 1.0,
+    "INVENTED": 1.0,
+    "DEPTH_MISMATCH": 1.0,
+    "LOST_DATA_DEP": 0.2254,
+    "REORDER_STMTS": 0.2254,
+    "ALGO_REPLACE": 0.2353
+  },
+  "category_details": {
+    "MISSING": {
+      "injected": 59,
+      "detected": 59,
+      "failed_injection": 12
+    },
+    "INVENTED": {
+      "injected": 71,
+      "detected": 71,
+      "failed_injection": 0
+    },
+    "DEPTH_MISMATCH": {
+      "injected": 71,
+      "detected": 71,
+      "failed_injection": 0
+    },
+    "LOST_DATA_DEP": {
+      "injected": 71,
+      "detected": 16,
+      "failed_injection": 0
+    },
+    "REORDER_STMTS": {
+      "injected": 71,
+      "detected": 16,
+      "failed_injection": 0
+    },
+    "ALGO_REPLACE": {
+      "injected": 68,
+      "detected": 16,
+      "failed_injection": 3
+    }
+  },
+  "records": [
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1024_video_stitching.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1046_last_stone_weight.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1052_grumpy_bookstore_owner.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1060_missing_element_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1063_number_of_valid_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1089_duplicate_zeros.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1099_two_sum_less_than_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1105_filling_bookcase_shelves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1121_divide_array_into_increasing_sequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1168_optimize_water_distribution_in_a_village.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "11_container_with_most_water.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1221_split_a_string_in_balanced_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1231_divide_chocolate.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1286_iterator_for_combination.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1288_remove_covered_intervals.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1310_xor_queries_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "132_palindrome_partitioning_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "137_single_number_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1385_find_the_distance_value_between_two_arrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1408_string_matching_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1416_restore_the_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1426_counting_elements.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1447_simplified_fractions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1480_running_sum_of_1d_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "152_maximum_product_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "153_find_minimum_in_rotated_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1548_the_most_similar_path_in_a_graph.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1560_most_visited_sector_in_a_circular_track.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1564_put_boxes_into_the_warehouse_i.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1570_dot_product_of_two_sparse_vectors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1575_count_all_possible_routes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1588_sum_of_all_odd_length_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1603_design_parking_system.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1616_split_two_strings_to_make_palindrome.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "162_find_peak_element.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1656_design_an_ordered_stream.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1664_ways_to_make_a_fair_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1679_max_number_of_k_sum_pairs.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "167_two_sum_ii_input_array_is_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "MISSING",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "MISSING",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "MISSING",
+      "detected_categories": [
+        "missing",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1024_video_stitching.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1046_last_stone_weight.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1052_grumpy_bookstore_owner.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1060_missing_element_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1063_number_of_valid_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1089_duplicate_zeros.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1099_two_sum_less_than_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1105_filling_bookcase_shelves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1121_divide_array_into_increasing_sequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1168_optimize_water_distribution_in_a_village.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "11_container_with_most_water.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1221_split_a_string_in_balanced_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1231_divide_chocolate.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1286_iterator_for_combination.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1288_remove_covered_intervals.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1310_xor_queries_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "132_palindrome_partitioning_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "137_single_number_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1385_find_the_distance_value_between_two_arrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1408_string_matching_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1416_restore_the_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1426_counting_elements.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1447_simplified_fractions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1480_running_sum_of_1d_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "152_maximum_product_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "153_find_minimum_in_rotated_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1548_the_most_similar_path_in_a_graph.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1560_most_visited_sector_in_a_circular_track.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1564_put_boxes_into_the_warehouse_i.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1570_dot_product_of_two_sparse_vectors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1575_count_all_possible_routes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1588_sum_of_all_odd_length_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1603_design_parking_system.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1616_split_two_strings_to_make_palindrome.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "162_find_peak_element.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1656_design_an_ordered_stream.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1664_ways_to_make_a_fair_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1679_max_number_of_k_sum_pairs.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "167_two_sum_ii_input_array_is_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "INVENTED",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "INVENTED",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "depth_mismatch",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1024_video_stitching.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1046_last_stone_weight.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1052_grumpy_bookstore_owner.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1060_missing_element_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1063_number_of_valid_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1089_duplicate_zeros.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1099_two_sum_less_than_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1105_filling_bookcase_shelves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1121_divide_array_into_increasing_sequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1168_optimize_water_distribution_in_a_village.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "11_container_with_most_water.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1221_split_a_string_in_balanced_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1231_divide_chocolate.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1286_iterator_for_combination.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1288_remove_covered_intervals.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1310_xor_queries_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "132_palindrome_partitioning_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "137_single_number_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1385_find_the_distance_value_between_two_arrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1408_string_matching_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1416_restore_the_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1426_counting_elements.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1447_simplified_fractions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1480_running_sum_of_1d_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "152_maximum_product_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "153_find_minimum_in_rotated_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1548_the_most_similar_path_in_a_graph.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1560_most_visited_sector_in_a_circular_track.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1564_put_boxes_into_the_warehouse_i.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1570_dot_product_of_two_sparse_vectors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1575_count_all_possible_routes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1588_sum_of_all_odd_length_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1603_design_parking_system.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "depth_mismatch"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1616_split_two_strings_to_make_palindrome.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "162_find_peak_element.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1656_design_an_ordered_stream.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1664_ways_to_make_a_fair_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1679_max_number_of_k_sum_pairs.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "167_two_sum_ii_input_array_is_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "DEPTH_MISMATCH",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "DEPTH_MISMATCH",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1024_video_stitching.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1046_last_stone_weight.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1052_grumpy_bookstore_owner.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1060_missing_element_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1063_number_of_valid_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1089_duplicate_zeros.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1099_two_sum_less_than_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1105_filling_bookcase_shelves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1121_divide_array_into_increasing_sequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1168_optimize_water_distribution_in_a_village.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "11_container_with_most_water.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1221_split_a_string_in_balanced_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1231_divide_chocolate.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1286_iterator_for_combination.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1288_remove_covered_intervals.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1310_xor_queries_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "132_palindrome_partitioning_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "137_single_number_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1385_find_the_distance_value_between_two_arrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1408_string_matching_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1416_restore_the_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1426_counting_elements.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1447_simplified_fractions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1480_running_sum_of_1d_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "152_maximum_product_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "153_find_minimum_in_rotated_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1548_the_most_similar_path_in_a_graph.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1560_most_visited_sector_in_a_circular_track.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1564_put_boxes_into_the_warehouse_i.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1570_dot_product_of_two_sparse_vectors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1575_count_all_possible_routes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1588_sum_of_all_odd_length_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1603_design_parking_system.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1616_split_two_strings_to_make_palindrome.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "162_find_peak_element.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1656_design_an_ordered_stream.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1664_ways_to_make_a_fair_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1679_max_number_of_k_sum_pairs.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "167_two_sum_ii_input_array_is_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "LOST_DATA_DEP",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "LOST_DATA_DEP",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1024_video_stitching.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1046_last_stone_weight.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1052_grumpy_bookstore_owner.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1060_missing_element_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1063_number_of_valid_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1089_duplicate_zeros.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1099_two_sum_less_than_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1105_filling_bookcase_shelves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1121_divide_array_into_increasing_sequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1168_optimize_water_distribution_in_a_village.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "11_container_with_most_water.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1221_split_a_string_in_balanced_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1231_divide_chocolate.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1286_iterator_for_combination.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1288_remove_covered_intervals.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1310_xor_queries_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "132_palindrome_partitioning_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "137_single_number_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1385_find_the_distance_value_between_two_arrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1408_string_matching_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1416_restore_the_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1426_counting_elements.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1447_simplified_fractions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1480_running_sum_of_1d_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "152_maximum_product_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "153_find_minimum_in_rotated_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1548_the_most_similar_path_in_a_graph.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1560_most_visited_sector_in_a_circular_track.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1564_put_boxes_into_the_warehouse_i.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1570_dot_product_of_two_sparse_vectors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1575_count_all_possible_routes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1588_sum_of_all_odd_length_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1603_design_parking_system.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1616_split_two_strings_to_make_palindrome.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "162_find_peak_element.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1656_design_an_ordered_stream.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1664_ways_to_make_a_fair_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1679_max_number_of_k_sum_pairs.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "167_two_sum_ii_input_array_is_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "REORDER_STMTS",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "REORDER_STMTS",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1024_video_stitching.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1046_last_stone_weight.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1052_grumpy_bookstore_owner.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1060_missing_element_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1063_number_of_valid_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1089_duplicate_zeros.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1099_two_sum_less_than_k.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1105_filling_bookcase_shelves.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1121_divide_array_into_increasing_sequences.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1168_optimize_water_distribution_in_a_village.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "11_container_with_most_water.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1221_split_a_string_in_balanced_strings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1231_divide_chocolate.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1286_iterator_for_combination.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1288_remove_covered_intervals.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1310_xor_queries_of_a_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "132_palindrome_partitioning_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "134_gas_station.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "137_single_number_ii.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1385_find_the_distance_value_between_two_arrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1408_string_matching_in_an_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1416_restore_the_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1426_counting_elements.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": false,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": "Mutator could not find a suitable AST node"
+    },
+    {
+      "source_file": "1447_simplified_fractions.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1480_running_sum_of_1d_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "152_maximum_product_subarray.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "153_find_minimum_in_rotated_sorted_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1548_the_most_similar_path_in_a_graph.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1560_most_visited_sector_in_a_circular_track.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1564_put_boxes_into_the_warehouse_i.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1570_dot_product_of_two_sparse_vectors.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1575_count_all_possible_routes.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1588_sum_of_all_odd_length_subarrays.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1603_design_parking_system.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1616_split_two_strings_to_make_palindrome.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "162_find_peak_element.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1656_design_an_ordered_stream.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1664_ways_to_make_a_fair_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1679_max_number_of_k_sum_pairs.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "167_two_sum_ii_input_array_is_sorted.c",
+      "model": "groq_llama-3.3-70b-versatile",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1250_check_if_it_is_a_good_array.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": false,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [],
+      "error": null
+    },
+    {
+      "source_file": "1542_find_longest_awesome_substring.c",
+      "model": "ollama_llama3.1_8b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1143_longest_common_subsequence.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1163_last_substring_in_lexicographical_order.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    },
+    {
+      "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
+      "model": "ollama_qwen2.5-coder_7b",
+      "mutation_type": "ALGO_REPLACE",
+      "injection_success": true,
+      "detected": true,
+      "expected_category": "ALGO_REPLACE",
+      "detected_categories": [
+        "invented",
+        "invented",
+        "missing",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented",
+        "invented"
+      ],
+      "error": null
+    }
+  ]
+}

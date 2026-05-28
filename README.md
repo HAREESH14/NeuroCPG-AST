@@ -238,6 +238,8 @@ make extract SRC=path/to/File.java LANG=java
 ```bash
 # Compare C source against Java translation
 make compare SRC=benchmarks/datasets/53_maximum_subarray.c TGT=path/to/Translation.java
+# Or directly using the CLI tool:
+uv run python -m neuroast.cli compare benchmarks/datasets/53_maximum_subarray.c path/to/Translation.java
 ```
 
 ---
@@ -265,15 +267,38 @@ uv run python scripts/translate_benchmarks.py \
 
 ### Step 2: Run Four-Way Ablation
 
+The verification pipeline supports several modes for ablation. You can run them all at once, or selectively depending on whether you need fast results or deep semantic metrics (Jaccard/Tversky) for the paper.
+
 ```bash
-# Run all 4 verification configurations for each model
-# Configurations: none, structural_only, semantic_only, progressive
+# Option A: Run ALL modes for ALL models (Requires Joern running)
+# Note: This takes ~45 minutes as it extracts CPGs for every file.
+uv run python scripts/run_benchmarks.py
 
-uv run python scripts/run_benchmarks.py \
-  --model groq_llama-3.3-70b-versatile \
-  --config progressive
+# Option B: Run only the fast structural verification (Phase 1)
+# Use this to quickly calculate Tree Edit Distance (TED) metrics. Takes ~2 minutes.
+uv run python scripts/run_benchmarks.py --modes structural_only
 
-# Repeat for all model × config combinations
+# Option C: Run progressive verification (The proposed RC4 approach)
+# Fast-fails on structural hallucinations. Skips Phase 2 if Phase 1 fails.
+uv run python scripts/run_benchmarks.py --modes progressive
+
+# Option D: Force semantic verification on ALL files (Phase 2)
+# NOTE FOR MEMORY CONSTRAINED SYSTEMS (e.g., Docker Desktop capped at ~3.5GB):
+# Joern's JVM heap can fill up and cause Linux to OOM-kill the container after processing
+# several hundred complex files. If your Docker VM has limited memory, run one model at a time
+# and restart Joern between runs to give the JVM a clean slate:
+#
+# docker restart neuroast_joern && sleep 60
+# uv run python scripts/run_benchmarks.py --modes semantic_only --model groq_llama-3.3-70b-versatile
+# docker restart neuroast_joern && sleep 60
+# uv run python scripts/run_benchmarks.py --modes semantic_only --model ollama_llama3.1_8b
+# docker restart neuroast_joern && sleep 60
+# uv run python scripts/run_benchmarks.py --modes semantic_only --model ollama_qwen2.5-coder_7b
+# if you facing oom on joern or process is stucked for a long time try 
+# try to run this: docker restart neuroast_joern && sleep 60  on another terminal . it restart the joern .
+
+# If you have high memory limits (e.g. 12GB+), you can run them all at once:
+uv run python scripts/run_benchmarks.py --modes semantic_only
 ```
 
 ### Step 3: Run LLM-as-a-Judge Baseline
@@ -283,12 +308,7 @@ uv run python scripts/run_benchmarks.py \
 uv run python scripts/llm_judge_baseline.py
 ```
 
-### Step 4: Generate Paper Tables
 
-```bash
-# Generate LaTeX-ready ablation and taxonomy tables
-uv run python scripts/generate_tables.py
-```
 
 ---
 
@@ -383,19 +403,7 @@ make joern-test     # Send test CPGQL query
 
 ---
 
-## Paper
 
-The accompanying research paper is in `Paper/`. To compile:
-
-```bash
-cd Paper
-pdflatex main.tex
-bibtex main
-pdflatex main.tex
-pdflatex main.tex
-```
-
-Or upload the `Paper/` folder to [Overleaf](https://www.overleaf.com/) for cloud compilation.
 
 ---
 

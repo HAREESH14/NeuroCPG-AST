@@ -238,9 +238,12 @@ class CPGExtractor:
         except Exception as exc:
             raise CPGExtractionError(f"CPG extraction failed for {filename}: {exc}") from exc
         finally:
-            # Clean up the Joern project (but leave server running)
+            # Delete the Joern project to free JVM heap memory.
+            # IMPORTANT: We use delete_project (not close_project) because
+            # close() only marks the project inactive but keeps its CPG data
+            # in the JVM heap. delete() actually frees the memory.
             with contextlib.suppress(Exception):
-                client.close_project(project_name)
+                client.delete_project(project_name)
             # Clean up temp file
             source_path.unlink(missing_ok=True)
             tmp_dir.rmdir()

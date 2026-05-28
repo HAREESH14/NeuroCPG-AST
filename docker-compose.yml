@@ -62,7 +62,7 @@ services:
       # Increase to 8g–12g for large datasets (CodeNet scale).
       JAVA_OPTS: >-
         -Xms512m
-        -Xmx6g
+        -Xmx2g
         -XX:+UseG1GC
         -XX:+HeapDumpOnOutOfMemoryError
         -XX:HeapDumpPath=/app/workspace/oom-dump.hprof
@@ -88,15 +88,16 @@ services:
 
     # Resource limits — prevents Joern from starving the host OS or the
     # Python NeuroAST process running alongside it.
-    deploy:
-      resources:
-        limits:
-          cpus: "4"
-          memory: 7G
-        reservations:
-          cpus: "1"
-          memory: 1G
-
+      #   deploy:
+      # resources:
+      #   limits:
+      #     cpus: "4"
+      #     memory: 12G
+      #   reservations:
+      #     cpus: "1"
+      #     memory: 4G
+    mem_limit: 12g
+    mem_reservation: 4g
     # Structured logs — helpful when reviewing benchmark runs later.
     logging:
       driver: "json-file"

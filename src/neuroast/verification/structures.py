@@ -257,6 +257,8 @@ class AlignmentReport(BaseModel):
         confidence: Alignment confidence score (0.0 = completely misaligned, 1.0 = perfect).
         phase: Which verification phase produced this report.
         verification_time_ms: Time taken for verification in milliseconds.
+        tree_edit_distance: Zhang-Shasha tree edit distance between CFG trees (Phase 1).
+        tree_similarity: Normalized TED similarity: 1 - TED / max(|S|, |T|) (Phase 1).
     """
 
     is_aligned: bool
@@ -266,6 +268,8 @@ class AlignmentReport(BaseModel):
     confidence: float = Field(ge=0.0, le=1.0)
     phase: Literal["structural", "semantic", "progressive"] = "structural"
     verification_time_ms: float = 0.0
+    tree_edit_distance: int | None = None
+    tree_similarity: float | None = None
 
     @property
     def structural_hallucinations(self) -> list[Hallucination]:
@@ -459,6 +463,9 @@ class SemanticAlignmentReport(AlignmentReport):
         tolerated_transformations: List of valid idioms that were initially flagged.
         phase1_time_ms: Time spent in Phase 1 (structural) verification.
         phase2_time_ms: Time spent in Phase 2 (semantic) verification.
+        data_flow_jaccard: Jaccard similarity J(S_df, T_df) on data-flow edge sets.
+        control_dep_jaccard: Jaccard similarity J(S_cd, T_cd) on control-dep edge sets.
+        tversky_index: Tversky index T(S, T, α, β) for asymmetric similarity.
     """
 
     data_flow_preserved: bool = True
@@ -467,6 +474,9 @@ class SemanticAlignmentReport(AlignmentReport):
     tolerated_transformations: list[ToleratedTransformation] = Field(default_factory=list)
     phase1_time_ms: float = 0.0
     phase2_time_ms: float = 0.0
+    data_flow_jaccard: float | None = None
+    control_dep_jaccard: float | None = None
+    tversky_index: float | None = None
 
 
 # =============================================================================

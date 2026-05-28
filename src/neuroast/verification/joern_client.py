@@ -178,6 +178,17 @@ class JoernClient:
         self.query(f'close("{project_name}")')
         logger.info("Closed Joern project: %s", project_name)
 
+    def delete_project(self, project_name: str) -> None:
+        """Delete a project from Joern's workspace, freeing JVM heap memory.
+
+        Unlike ``close_project`` (which only marks the project inactive),
+        ``delete`` removes the project from the workspace index AND frees
+        the in-memory CPG data.  This is critical for batch processing
+        hundreds of files without exhausting the JVM heap.
+        """
+        self.query(f'delete("{project_name}")')
+        logger.info("Deleted Joern project: %s", project_name)
+
     # ─────────────────────────────────────────────────────────────────────────
     # Context manager support
     # ─────────────────────────────────────────────────────────────────────────

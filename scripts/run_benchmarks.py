@@ -22,6 +22,61 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
+def _purge_joern_before_run() -> None:
+    """Purge all Joern workspaces before starting a model run.
+
+    If Joern is unresponsive, restart the Docker container and wait for
+    it to become healthy again.
+    """
+    import contextlib
+    import re
+    import subprocess
+    import time as _time
+
+    try:
+        from neuroast.verification.joern_client import JoernClient
+
+        client = JoernClient()
+        raw = client.query('workspace.projects.map(_.name).l')
+        names = re.findall(r'"([^"]*)"', raw)
+
+        deleted = 0
+        for name in names:
+            with contextlib.suppress(Exception):
+                client.query(f'delete("{name}")')
+                deleted += 1
+
+        if names:
+            logger.info("Pre-run purge: deleted %d/%d Joern workspaces", deleted, len(names))
+        else:
+            logger.info("Pre-run purge: Joern workspace is clean")
+
+    except Exception as exc:
+        logger.warning("Joern unresponsive (%s) — restarting Docker container...", exc)
+        try:
+            subprocess.run(
+                ["docker", "restart", "neuroast_joern"],
+                check=True,
+                capture_output=True,
+                timeout=30,
+            )
+            # Wait for Joern to become healthy (healthcheck interval is 15s)
+            for attempt in range(12):
+                _time.sleep(10)
+                result = subprocess.run(
+                    ["docker", "inspect", "--format={{.State.Health.Status}}", "neuroast_joern"],
+                    capture_output=True,
+                    text=True,
+                    timeout=5,
+                )
+                if "healthy" in result.stdout:
+                    logger.info("Joern restarted and healthy (attempt %d)", attempt + 1)
+                    return
+            logger.error("Joern failed to become healthy after restart")
+        except Exception as restart_exc:
+            logger.error("Failed to restart Joern: %s", restart_exc)
+
+
 def run_experiment(mode: str, model_dir: Path, output_json: Path) -> None:
     """Run a single ablation configuration on one model's translations."""
     benchmarks_dir = Path("benchmarks/datasets")
@@ -149,6 +204,12 @@ def main() -> None:
 
         for mode in modes:
             out_file = results_out / f"{mode}_{model_name}.json"
+
+            # Purge Joern workspaces before each semantic run to prevent
+            # OOM from accumulation across models.
+            if mode in ("semantic_only", "progressive"):
+                _purge_joern_before_run()
+
             run_experiment(mode, model_dir, out_file)
 
     # Also generate combined results for backward compatibility

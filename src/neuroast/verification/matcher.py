@@ -17,6 +17,9 @@ from __future__ import annotations
 import logging
 from typing import Literal
 
+from zss import simple_distance
+from zss import Node as ZssNode
+
 from neuroast.symbolic.extractor import StructuralExtractor
 from neuroast.verification.base import BaseVerifier
 from neuroast.verification.structures import (
@@ -59,6 +62,65 @@ class StructuralMatcher:
             "depth_mismatch": 0.5,
         }
 
+    # ─────────────────────────────────────────────────────────────────────────
+    # Zhang-Shasha Tree Edit Distance (research-level metric)
+    # ─────────────────────────────────────────────────────────────────────────
+
+    @staticmethod
+    def _cfn_to_zss(node: ControlFlowNode) -> ZssNode:
+        """Convert a ControlFlowNode tree to a zss.Node tree for TED computation.
+
+        Each node is labeled with its type (e.g., 'for_loop', 'if_branch').
+        The tree structure is preserved recursively.
+        """
+        zss_node = ZssNode(node.node_type.value)
+        for child in node.children:
+            zss_node.addkid(StructuralMatcher._cfn_to_zss(child))
+        return zss_node
+
+    def _compute_tree_edit_distance(
+        self,
+        source_funcs: list[ControlFlowNode],
+        target_funcs: list[ControlFlowNode],
+    ) -> tuple[int, float]:
+        """Compute Zhang-Shasha tree edit distance between two CFG forests.
+
+        Constructs a synthetic root over all function-level trees and
+        computes the exact tree edit distance using the Zhang-Shasha (1989)
+        algorithm.  Returns both the raw distance and the normalized
+        similarity score.
+
+        Returns
+        -------
+        tuple[int, float]
+            (edit_distance, tree_similarity) where tree_similarity
+            = 1 - edit_distance / max(|source_nodes|, |target_nodes|, 1).
+        """
+        # Build synthetic root nodes to handle multi-function files
+        s_root = ZssNode("root")
+        for fn in source_funcs:
+            s_root.addkid(self._cfn_to_zss(fn))
+
+        t_root = ZssNode("root")
+        for fn in target_funcs:
+            t_root.addkid(self._cfn_to_zss(fn))
+
+        # Count total nodes for normalization
+        source_size = sum(len(fn.flatten()) for fn in source_funcs)
+        target_size = sum(len(fn.flatten()) for fn in target_funcs)
+        max_size = max(source_size, target_size, 1)
+
+        # Zhang-Shasha tree edit distance
+        edit_dist = simple_distance(s_root, t_root)
+        tree_sim = max(0.0, 1.0 - edit_dist / max_size)
+
+        logger.info(
+            "Tree edit distance: %d (similarity=%.4f, |S|=%d, |T|=%d)",
+            edit_dist, tree_sim, source_size, target_size,
+        )
+
+        return edit_dist, round(tree_sim, 4)
+
     def match(
         self,
         source: ControlFlowGraph,
@@ -91,7 +153,15 @@ class StructuralMatcher:
         # ── Level 2 & 3: Function-level alignment + per-function diff ──────
         hallucinations.extend(self._compare_functions(source.functions, target.functions))
 
-        # ── Calculate confidence ────────────────────────────────────────────
+        # ── Tree Edit Distance (Zhang-Shasha, 1989) ────────────────────────
+        # This is computed IN ADDITION to the count-based hallucinations.
+        # The hallucinations above give taxonomy labels; the TED gives a
+        # principled, citable similarity metric.
+        ted, tree_sim = self._compute_tree_edit_distance(
+            source.functions, target.functions,
+        )
+
+        # ── Calculate confidence (ORIGINAL — count-based penalty) ──────────
         total_elements = max(source.total_elements, 1)
         weighted_penalty = sum(self.weights.get(h.category.value, 1.0) for h in hallucinations)
         confidence = max(0.0, 1.0 - weighted_penalty / total_elements)
@@ -105,6 +175,9 @@ class StructuralMatcher:
             target_summary=target_summary,
             confidence=round(confidence, 4),
             phase="structural",
+            # NEW — principled similarity metrics
+            tree_edit_distance=ted,
+            tree_similarity=tree_sim,
         )
 
         logger.info(

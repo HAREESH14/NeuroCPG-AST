@@ -51,6 +51,9 @@ class SemanticMatcher:
         self,
         confidence_threshold: float = 0.90,
         weights: dict[str, float] | None = None,
+        jaccard_weights: dict[str, float] | None = None,
+        tversky_alpha: float = 1.0,
+        tversky_beta: float = 1.0,
     ) -> None:
         self.confidence_threshold = confidence_threshold
         self.weights = weights or {
@@ -59,6 +62,82 @@ class SemanticMatcher:
             "invalid_type_transform": 1.0,
             "data_flow_invention": 0.7,
         }
+        # Weights for the composite Jaccard-based confidence score
+        self.jaccard_weights = jaccard_weights or {
+            "data_flow": 0.50,
+            "control_dep": 0.35,
+            "type_transform": 0.15,
+        }
+        # Tversky asymmetry parameters:
+        #   α = β = 1.0 → Jaccard index
+        #   α = β = 0.5 → Sørensen-Dice coefficient
+        #   α = 1.0, β = 0.0 → penalize only source-side misses
+        self.tversky_alpha = tversky_alpha
+        self.tversky_beta = tversky_beta
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # Set-Theoretic Similarity Metrics (research-level math)
+    # ─────────────────────────────────────────────────────────────────────────
+
+    @staticmethod
+    def jaccard_similarity(set_a: set[tuple[str, ...]], set_b: set[tuple[str, ...]]) -> float:
+        """Compute Jaccard similarity coefficient.
+
+        J(A, B) = |A ∩ B| / |A ∪ B|
+
+        Returns 1.0 when both sets are empty (vacuously identical).
+        Returns 0.0 when sets share no elements.
+
+        References
+        ----------
+        Jaccard, P. (1912). "The distribution of the flora in the alpine zone."
+        New Phytologist, 11(2), 37–50.
+        """
+        if not set_a and not set_b:
+            return 1.0
+        intersection = set_a & set_b
+        union = set_a | set_b
+        return len(intersection) / len(union)
+
+    @staticmethod
+    def tversky_index(
+        set_a: set[tuple[str, ...]],
+        set_b: set[tuple[str, ...]],
+        alpha: float = 1.0,
+        beta: float = 1.0,
+    ) -> float:
+        """Compute Tversky index for asymmetric set similarity.
+
+        T(A, B) = |A ∩ B| / (|A ∩ B| + α|A \\ B| + β|B \\ A|)
+
+        Special cases:
+            α = β = 1.0  →  Jaccard index
+            α = β = 0.5  →  Sørensen-Dice coefficient
+            α = 1.0, β = 0  →  precision-like (only penalize A-side misses)
+
+        Parameters
+        ----------
+        set_a:
+            Source dependency edge set.
+        set_b:
+            Target dependency edge set.
+        alpha:
+            Weight for elements in A but not in B (source-only = MISSING).
+        beta:
+            Weight for elements in B but not in A (target-only = INVENTED).
+
+        References
+        ----------
+        Tversky, A. (1977). "Features of similarity."
+        Psychological Review, 84(4), 327–352.
+        """
+        if not set_a and not set_b:
+            return 1.0
+        intersection = set_a & set_b
+        a_minus_b = set_a - set_b  # Source has, target doesn't (MISSING/BROKEN)
+        b_minus_a = set_b - set_a  # Target has, source doesn't (INVENTED)
+        denom = len(intersection) + alpha * len(a_minus_b) + beta * len(b_minus_a)
+        return len(intersection) / denom if denom > 0 else 1.0
 
     def match(
         self,
@@ -149,11 +228,38 @@ class SemanticMatcher:
                     )
                 )
 
-        # Calculate confidence
+        # Calculate confidence (ORIGINAL — count-based penalty)
         total_checks = max(sum(len(s.data_deps) + len(s.control_deps) for s in source.functions), 1)
         weighted_penalty = sum(self.weights.get(h.category.value, 1.0) for h in hallucinations)
         confidence = max(0.0, 1.0 - weighted_penalty / total_checks)
         is_aligned = confidence >= self.confidence_threshold and len(hallucinations) == 0
+
+        # ─────────────────────────────────────────────────────────────────────
+        # NEW — Jaccard & Tversky similarity (computed alongside, not replacing)
+        # ─────────────────────────────────────────────────────────────────────
+        df_source_set, df_target_set = self._build_data_flow_edge_sets(
+            source.functions, target.functions, aligned_pairs,
+        )
+        cd_source_set, cd_target_set = self._build_control_dep_edge_sets(
+            source.functions, target.functions, aligned_pairs,
+        )
+
+        df_jaccard = self.jaccard_similarity(df_source_set, df_target_set)
+        cd_jaccard = self.jaccard_similarity(cd_source_set, cd_target_set)
+
+        # Tversky index on the union of all dependency edges
+        all_source = df_source_set | cd_source_set
+        all_target = df_target_set | cd_target_set
+        tversky = self.tversky_index(
+            all_source, all_target,
+            alpha=self.tversky_alpha,
+            beta=self.tversky_beta,
+        )
+
+        logger.info(
+            "Semantic similarity: df_jaccard=%.4f, cd_jaccard=%.4f, tversky=%.4f",
+            df_jaccard, cd_jaccard, tversky,
+        )
 
         elapsed_ms = (time.perf_counter() - start_time) * 1000
 
@@ -167,6 +273,10 @@ class SemanticMatcher:
             control_deps_preserved=control_deps_ok,
             type_transforms_valid=types_ok,
             phase2_time_ms=elapsed_ms,
+            # NEW — principled similarity metrics
+            data_flow_jaccard=round(df_jaccard, 4),
+            control_dep_jaccard=round(cd_jaccard, 4),
+            tversky_index=round(tversky, 4),
         )
 
     # ─────────────────────────────────────────────────────────────────────────
@@ -396,3 +506,139 @@ class SemanticMatcher:
                     )
 
         return hallucinations
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # Edge-Set Builders for Jaccard/Tversky Similarity
+    # ─────────────────────────────────────────────────────────────────────────
+
+    def _build_data_flow_edge_sets(
+        self,
+        source_funcs: list[NormFunction],
+        target_funcs: list[NormFunction],
+        aligned_pairs: list[tuple[NormFunction, NormFunction]],
+    ) -> tuple[set[tuple[str, ...]], set[tuple[str, ...]]]:
+        """Build hashable edge sets from data dependencies for Jaccard computation.
+
+        Each data dependency is represented as a tuple:
+            (function_name, variable_role, def_context, use_context)
+
+        This creates a language-agnostic fingerprint of the data-flow graph
+        that can be compared using set-theoretic similarity metrics.
+
+        Returns
+        -------
+        tuple[set, set]
+            (source_edge_set, target_edge_set)
+        """
+        source_edges: set[tuple[str, ...]] = set()
+        target_edges: set[tuple[str, ...]] = set()
+
+        # Aligned functions: use canonical (source) function name as key
+        for s_func, t_func in aligned_pairs:
+            canonical_name = s_func.name
+            for dep in s_func.data_deps:
+                source_edges.add((
+                    canonical_name,
+                    dep.variable_role.value,
+                    dep.def_context,
+                    dep.use_context,
+                ))
+            for dep in t_func.data_deps:
+                target_edges.add((
+                    canonical_name,
+                    dep.variable_role.value,
+                    dep.def_context,
+                    dep.use_context,
+                ))
+
+        # Unmatched source functions
+        matched_source = {s.name for s, _ in aligned_pairs}
+        for s_func in source_funcs:
+            if s_func.name not in matched_source:
+                for dep in s_func.data_deps:
+                    source_edges.add((
+                        s_func.name,
+                        dep.variable_role.value,
+                        dep.def_context,
+                        dep.use_context,
+                    ))
+
+        # Unmatched target functions
+        matched_target = {t.name for _, t in aligned_pairs}
+        for t_func in target_funcs:
+            if t_func.name not in matched_target:
+                for dep in t_func.data_deps:
+                    target_edges.add((
+                        t_func.name,
+                        dep.variable_role.value,
+                        dep.def_context,
+                        dep.use_context,
+                    ))
+
+        return source_edges, target_edges
+
+    def _build_control_dep_edge_sets(
+        self,
+        source_funcs: list[NormFunction],
+        target_funcs: list[NormFunction],
+        aligned_pairs: list[tuple[NormFunction, NormFunction]],
+    ) -> tuple[set[tuple[str, ...]], set[tuple[str, ...]]]:
+        """Build hashable edge sets from control dependencies for Jaccard computation.
+
+        Each control dependency is represented as a tuple:
+            (function_name, condition_normalized, dependent_normalized)
+
+        The condition and dependent statement texts are normalized to
+        lowercase with whitespace stripped for cross-language comparability.
+
+        Returns
+        -------
+        tuple[set, set]
+            (source_edge_set, target_edge_set)
+        """
+        source_edges: set[tuple[str, ...]] = set()
+        target_edges: set[tuple[str, ...]] = set()
+
+        def _normalize_stmt(text: str) -> str:
+            """Normalize statement text for cross-language comparison."""
+            return text.strip().lower().replace(" ", "")
+
+        # Aligned functions: use canonical (source) function name
+        for s_func, t_func in aligned_pairs:
+            canonical_name = s_func.name
+            for dep in s_func.control_deps:
+                source_edges.add((
+                    canonical_name,
+                    _normalize_stmt(dep.condition),
+                    _normalize_stmt(dep.dependent_statement),
+                ))
+            for dep in t_func.control_deps:
+                target_edges.add((
+                    canonical_name,
+                    _normalize_stmt(dep.condition),
+                    _normalize_stmt(dep.dependent_statement),
+                ))
+
+        # Unmatched source functions
+        matched_source = {s.name for s, _ in aligned_pairs}
+        for s_func in source_funcs:
+            if s_func.name not in matched_source:
+                for dep in s_func.control_deps:
+                    source_edges.add((
+                        s_func.name,
+                        _normalize_stmt(dep.condition),
+                        _normalize_stmt(dep.dependent_statement),
+                    ))
+
+        # Unmatched target functions
+        matched_target = {t.name for _, t in aligned_pairs}
+        for t_func in target_funcs:
+            if t_func.name not in matched_target:
+                for dep in t_func.control_deps:
+                    target_edges.add((
+                        t_func.name,
+                        _normalize_stmt(dep.condition),
+                        _normalize_stmt(dep.dependent_statement),
+                    ))
+
+        return source_edges, target_edges

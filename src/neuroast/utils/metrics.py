@@ -47,6 +47,12 @@ class BenchmarkRecord:
     total_time_ms: float
     hallucination_categories: dict[str, int] = field(default_factory=dict)
     timestamp: str = field(default_factory=lambda: datetime.now(UTC).isoformat())
+    # NEW — principled similarity metrics (None if not computed)
+    tree_edit_distance: int | None = None
+    tree_similarity: float | None = None
+    data_flow_jaccard: float | None = None
+    control_dep_jaccard: float | None = None
+    tversky_index: float | None = None
 
     @classmethod
     def from_pipeline_result(
@@ -174,6 +180,12 @@ class MetricsCollector:
             tolerated_idioms=len(report.tolerated_idioms),
             total_time_ms=total_time_ms,
             hallucination_categories=cat_counts,
+            # NEW — similarity metrics from the report
+            tree_edit_distance=report.tree_edit_distance,
+            tree_similarity=report.tree_similarity,
+            data_flow_jaccard=getattr(report, 'data_flow_jaccard', None),
+            control_dep_jaccard=getattr(report, 'control_dep_jaccard', None),
+            tversky_index=getattr(report, 'tversky_index', None),
         )
         self.records.append(record)
         return record
@@ -253,6 +265,12 @@ class MetricsCollector:
                     "total_time_ms": round(r.total_time_ms, 2),
                     "hallucination_categories": r.hallucination_categories,
                     "timestamp": r.timestamp,
+                    # NEW — similarity metrics
+                    "tree_edit_distance": r.tree_edit_distance,
+                    "tree_similarity": round(r.tree_similarity, 4) if r.tree_similarity is not None else None,
+                    "data_flow_jaccard": round(r.data_flow_jaccard, 4) if r.data_flow_jaccard is not None else None,
+                    "control_dep_jaccard": round(r.control_dep_jaccard, 4) if r.control_dep_jaccard is not None else None,
+                    "tversky_index": round(r.tversky_index, 4) if r.tversky_index is not None else None,
                 }
                 for r in self.records
             ],

@@ -24,7 +24,7 @@ from __future__ import annotations
 
 import logging
 import time
-from typing import Literal
+from typing import Any, Literal
 
 from neuroast.verification.base import BaseVerifier
 from neuroast.verification.matcher import TreeSitterVerifier
@@ -75,6 +75,12 @@ class ProgressiveVerifier(BaseVerifier):
         self._semantic = semantic_matcher or SemanticMatcher()
         self._tolerance = tolerance_engine or ToleranceEngine()
         self.mode = mode
+
+        # Shared CPG infrastructure (lazy — created on first Phase 2 use)
+        self._cpg_extractor: Any | None = None
+        self._c_normalizer: Any | None = None
+        self._j_normalizer: Any | None = None
+        self._extraction_count: int = 0  # Track for periodic Joern cleanup
 
         logger.info("ProgressiveVerifier initialized in mode=%s", mode)
 
@@ -207,20 +213,25 @@ class ProgressiveVerifier(BaseVerifier):
 
         Note: In standalone mode, we attempt CPG extraction. If Joern is
         not available, we return an empty report with a warning.
+
+        Uses shared CPGExtractor + Normalizer instances to avoid
+        creating hundreds of Joern websocket connections.
         """
         try:
-            from neuroast.symbolic.cpg_extractor import CPGExtractor
-            from neuroast.symbolic.normalizer import CPGNormalizer
-
-            extractor = CPGExtractor()
-            c_normalizer = CPGNormalizer("c")
-            j_normalizer = CPGNormalizer("java")
+            extractor, c_norm, j_norm = self._get_cpg_infrastructure()
 
             c_cpg = extractor.extract(source_code, "c")
             j_cpg = extractor.extract(target_code, "java")
 
-            source_pdg = c_normalizer.normalize(c_cpg)
-            target_pdg = j_normalizer.normalize(j_cpg)
+            source_pdg = c_norm.normalize(c_cpg)
+            target_pdg = j_norm.normalize(j_cpg)
+
+            self._extraction_count += 1
+
+            # Periodic Joern workspace cleanup to prevent JVM heap exhaustion.
+            # Every 25 files, purge all loaded workspaces.
+            if self._extraction_count % 10 == 0:
+                self._purge_joern_workspaces(extractor)
 
             return self.verify_with_pdg(
                 source_pdg,
@@ -230,6 +241,9 @@ class ProgressiveVerifier(BaseVerifier):
             )
         except Exception as exc:
             logger.warning("Semantic-only verification failed: %s", exc)
+            # If Joern gave a bad HTTP response, try to recover by
+            # resetting the client so the next file gets a fresh connection.
+            self._reset_cpg_infrastructure()
             return AlignmentReport(
                 is_aligned=False,
                 confidence=0.0,
@@ -288,18 +302,18 @@ class ProgressiveVerifier(BaseVerifier):
         logger.info("Phase 1 PASSED — running Phase 2 semantic verification")
 
         try:
-            from neuroast.symbolic.cpg_extractor import CPGExtractor
-            from neuroast.symbolic.normalizer import CPGNormalizer
-
-            extractor = CPGExtractor()
-            c_normalizer = CPGNormalizer("c")
-            j_normalizer = CPGNormalizer("java")
+            extractor, c_norm, j_norm = self._get_cpg_infrastructure()
 
             c_cpg = extractor.extract(source_code, "c")
             j_cpg = extractor.extract(target_code, "java")
 
-            source_pdg = c_normalizer.normalize(c_cpg)
-            target_pdg = j_normalizer.normalize(j_cpg)
+            source_pdg = c_norm.normalize(c_cpg)
+            target_pdg = j_norm.normalize(j_cpg)
+
+            self._extraction_count += 1
+
+            if self._extraction_count % 25 == 0:
+                self._purge_joern_workspaces(extractor)
 
             return self.verify_with_pdg(
                 source_pdg,
@@ -313,6 +327,109 @@ class ProgressiveVerifier(BaseVerifier):
                 "Phase 2 failed (Joern unavailable?): %s — returning Phase 1 result",
                 exc,
             )
+            self._reset_cpg_infrastructure()
             # If Phase 2 fails, Phase 1 result is still valid
             phase1_report.phase = "progressive"
             return phase1_report
+
+    # ─────────────────────────────────────────────────────────────────────────
+    # CPG Infrastructure Management
+    # ─────────────────────────────────────────────────────────────────────────
+
+    def _get_cpg_infrastructure(self) -> tuple[Any, Any, Any]:
+        """Lazily create and return shared CPG extractor + normalizers.
+
+        Reuses a single CPGExtractor (and thus a single JoernClient
+        websocket connection) across all files, preventing connection
+        churn that crashes the Joern JVM.
+        """
+        if self._cpg_extractor is None:
+            from neuroast.symbolic.cpg_extractor import CPGExtractor
+            from neuroast.symbolic.normalizer import CPGNormalizer
+
+            self._cpg_extractor = CPGExtractor()
+            self._c_normalizer = CPGNormalizer("c")
+            self._j_normalizer = CPGNormalizer("java")
+            logger.info("CPG infrastructure created (shared for all files)")
+
+        return self._cpg_extractor, self._c_normalizer, self._j_normalizer
+
+    def _reset_cpg_infrastructure(self) -> None:
+        """Reset the CPG extractor after a connection failure.
+
+        Discards the old JoernClient so the next file gets a fresh
+        websocket connection. If the Joern Docker container itself has
+        crashed (e.g. from OOM), this will restart it so the benchmark
+        can continue gracefully.
+        """
+        import subprocess
+        import time as _time
+
+        logger.info("Resetting CPG infrastructure after failure")
+        self._cpg_extractor = None
+        self._c_normalizer = None
+        self._j_normalizer = None
+        
+        # Proactively check if the container is healthy; if not, restart it.
+        try:
+            status = subprocess.run(
+                ["docker", "inspect", "--format={{.State.Health.Status}}", "neuroast_joern"],
+                capture_output=True, text=True, timeout=5
+            ).stdout.strip()
+            
+            if status != "healthy":
+                logger.warning("Joern container is %s — restarting...", status)
+                subprocess.run(["docker", "restart", "neuroast_joern"], check=True, timeout=30)
+                # Wait for healthy
+                for _ in range(12):
+                    _time.sleep(10)
+                    check = subprocess.run(
+                        ["docker", "inspect", "--format={{.State.Health.Status}}", "neuroast_joern"],
+                        capture_output=True, text=True, timeout=5
+                    ).stdout.strip()
+                    if check == "healthy":
+                        logger.info("Joern restarted and healthy.")
+                        break
+        except Exception as e:
+            logger.error("Failed to check/restart Joern container: %s", e)
+
+    @staticmethod
+    def _purge_joern_workspaces(extractor: Any) -> None:
+        """Purge all loaded Joern workspaces to free JVM heap memory.
+
+        Joern keeps CPG data in-memory per workspace. After importing
+        many projects, the JVM heap fills up and responses degrade.
+
+        ``workspace.reset`` fails in Docker (FileSystemException: Device
+        or resource busy) because the workspace directory is a mounted
+        volume. Instead, we enumerate projects and ``delete`` each one
+        individually via CPGQL.
+        """
+        import contextlib
+        import re
+
+        try:
+            client = extractor._get_client()
+
+            # Get the list of loaded project names
+            raw = client.query('workspace.projects.map(_.name).l')
+            project_names = re.findall(r'"([^"]*)"', raw)
+
+            if not project_names:
+                logger.debug("No Joern workspaces to purge")
+                return
+
+            deleted = 0
+            for name in project_names:
+                with contextlib.suppress(Exception):
+                    client.query(f'delete("{name}")')
+                    deleted += 1
+
+            logger.info(
+                "Purged %d/%d Joern workspaces to free memory",
+                deleted,
+                len(project_names),
+            )
+        except Exception as exc:
+            with contextlib.suppress(Exception):
+                logger.warning("Workspace purge failed: %s", exc)

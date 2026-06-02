@@ -67,3 +67,6 @@ antiaudit/
 *.java
 research_review.md
 research_roadmap.md
+.metals/
+*.lock
+agent_docs/

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Paper/fig/architecturediagram.png" alt="NeuroAST Architecture" width="800"/>
+  <img src="figures/architecturediagram.png" alt="NeuroAST Architecture" width="800"/>
 </p>
 
 <h1 align="center">NeuroAST</h1>
@@ -222,6 +222,14 @@ make verify SRC=benchmarks/datasets/53_maximum_subarray.c
 # Or directly:
 uv run python -m neuroast.cli verify benchmarks/datasets/53_maximum_subarray.c
 ```
+
+**Successful Verification Output:**
+
+<img src="figures/image.png" alt="Successful Verification Output" width="800"/>
+
+**Hallucination Detected Output:**
+
+<img src="figures/image2.png" alt="Hallucination Detected Output" width="800"/>
 
 #### Extract Structural Fingerprint
 

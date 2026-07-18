@@ -1,0 +1,89 @@
+{
+  "experiment": "expanded_precision_audit",
+  "total_instances_audited": 257,
+  "overall_precision": 0.6965,
+  "overall_ci_95": {
+    "lower": 0.6377,
+    "upper": 0.7495
+  },
+  "per_category_precision": [
+    {
+      "category": "depth_mismatch",
+      "audited": 53,
+      "true_positives": 36,
+      "false_positives": 17,
+      "precision": 0.6792,
+      "ci_95_lower": 0.5452,
+      "ci_95_upper": 0.7891
+    },
+    {
+      "category": "invalid_type_transform",
+      "audited": 4,
+      "true_positives": 4,
+      "false_positives": 0,
+      "precision": 1.0,
+      "ci_95_lower": 0.5101,
+      "ci_95_upper": 1.0
+    },
+    {
+      "category": "invented",
+      "audited": 125,
+      "true_positives": 125,
+      "false_positives": 0,
+      "precision": 1.0,
+      "ci_95_lower": 0.9702,
+      "ci_95_upper": 1.0
+    },
+    {
+      "category": "lost_control_dep",
+      "audited": 5,
+      "true_positives": 5,
+      "false_positives": 0,
+      "precision": 1.0,
+      "ci_95_lower": 0.5655,
+      "ci_95_upper": 1.0
+    },
+    {
+      "category": "missing",
+      "audited": 70,
+      "true_positives": 9,
+      "false_positives": 61,
+      "precision": 0.1286,
+      "ci_95_lower": 0.0691,
+      "ci_95_upper": 0.2266
+    }
+  ],
+  "inter_annotator_agreement": {
+    "cohens_kappa": 0.9637,
+    "interpretation": "Almost Perfect"
+  },
+  "invented_subcategories": {
+    "other": 50,
+    "extra_loop": 59,
+    "extra_function_call": 12,
+    "extra_return": 2,
+    "extra_branch": 2
+  },
+  "precision_adjusted_prevalence": {
+    "groq_llama-3.1-8b-instant": {
+      "raw_flags": 48,
+      "adjusted_estimate": 38.5,
+      "adjustment_factor": 0.801
+    },
+    "groq_llama-3.3-70b-versatile": {
+      "raw_flags": 486,
+      "adjusted_estimate": 345.2,
+      "adjustment_factor": 0.71
+    },
+    "ollama_llama3.1_8b": {
+      "raw_flags": 951,
+      "adjusted_estimate": 732.9,
+      "adjustment_factor": 0.771
+    },
+    "ollama_qwen2.5-coder_7b": {
+      "raw_flags": 1440,
+      "adjusted_estimate": 1070.7,
+      "adjustment_factor": 0.744
+    }
+  }
+}

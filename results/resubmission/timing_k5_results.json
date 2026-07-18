@@ -1,0 +1,253 @@
+{
+  "experiment": "timing_benchmark_k5",
+  "results": [
+    {
+      "model": "groq_llama-3.1-8b-instant",
+      "mode": "structural_only",
+      "k": 5,
+      "total_files_per_run": 8,
+      "grand_mean_ms": 1.785,
+      "grand_std_ms": 0.596,
+      "grand_median_ms": 1.651,
+      "per_run_means_ms": [
+        2.847,
+        1.549,
+        1.547,
+        1.436,
+        1.546
+      ],
+      "per_run_medians_ms": [
+        2.812,
+        1.593,
+        1.651,
+        1.595,
+        1.692
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        48,
+        48,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "model": "groq_llama-3.1-8b-instant",
+      "mode": "progressive",
+      "k": 5,
+      "total_files_per_run": 8,
+      "grand_mean_ms": 1.763,
+      "grand_std_ms": 0.233,
+      "grand_median_ms": 1.756,
+      "per_run_means_ms": [
+        1.621,
+        1.611,
+        2.169,
+        1.735,
+        1.678
+      ],
+      "per_run_medians_ms": [
+        1.672,
+        1.756,
+        2.034,
+        1.879,
+        1.742
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        48,
+        48,
+        48,
+        48,
+        48
+      ]
+    },
+    {
+      "model": "groq_llama-3.3-70b-versatile",
+      "mode": "structural_only",
+      "k": 5,
+      "total_files_per_run": 200,
+      "grand_mean_ms": 2.239,
+      "grand_std_ms": 0.036,
+      "grand_median_ms": 1.363,
+      "per_run_means_ms": [
+        2.291,
+        2.205,
+        2.24,
+        2.206,
+        2.251
+      ],
+      "per_run_medians_ms": [
+        1.395,
+        1.271,
+        1.37,
+        1.363,
+        1.362
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        634,
+        634,
+        634,
+        634,
+        634
+      ]
+    },
+    {
+      "model": "groq_llama-3.3-70b-versatile",
+      "mode": "progressive",
+      "k": 5,
+      "total_files_per_run": 200,
+      "grand_mean_ms": 52.12,
+      "grand_std_ms": 34.305,
+      "grand_median_ms": 3.217,
+      "per_run_means_ms": [
+        101.494,
+        75.049,
+        28.254,
+        27.171,
+        28.631
+      ],
+      "per_run_medians_ms": [
+        3.188,
+        3.519,
+        3.217,
+        3.117,
+        3.372
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        477,
+        477,
+        477,
+        477,
+        477
+      ]
+    },
+    {
+      "model": "ollama_llama3.1_8b",
+      "mode": "structural_only",
+      "k": 5,
+      "total_files_per_run": 200,
+      "grand_mean_ms": 2.309,
+      "grand_std_ms": 0.085,
+      "grand_median_ms": 1.403,
+      "per_run_means_ms": [
+        2.433,
+        2.34,
+        2.208,
+        2.307,
+        2.256
+      ],
+      "per_run_medians_ms": [
+        1.549,
+        1.479,
+        1.403,
+        1.402,
+        1.401
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        1202,
+        1202,
+        1202,
+        1202,
+        1202
+      ]
+    },
+    {
+      "model": "ollama_llama3.1_8b",
+      "mode": "progressive",
+      "k": 5,
+      "total_files_per_run": 200,
+      "grand_mean_ms": 3.365,
+      "grand_std_ms": 0.037,
+      "grand_median_ms": 1.478,
+      "per_run_means_ms": [
+        3.326,
+        3.329,
+        3.378,
+        3.412,
+        3.38
+      ],
+      "per_run_medians_ms": [
+        1.473,
+        1.448,
+        1.478,
+        1.604,
+        1.485
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        951,
+        951,
+        951,
+        951,
+        951
+      ]
+    },
+    {
+      "model": "ollama_qwen2.5-coder_7b",
+      "mode": "structural_only",
+      "k": 5,
+      "total_files_per_run": 200,
+      "grand_mean_ms": 2.434,
+      "grand_std_ms": 0.094,
+      "grand_median_ms": 1.653,
+      "per_run_means_ms": [
+        2.361,
+        2.488,
+        2.568,
+        2.343,
+        2.408
+      ],
+      "per_run_medians_ms": [
+        1.653,
+        1.731,
+        1.778,
+        1.651,
+        1.607
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        1798,
+        1798,
+        1798,
+        1798,
+        1798
+      ]
+    },
+    {
+      "model": "ollama_qwen2.5-coder_7b",
+      "mode": "progressive",
+      "k": 5,
+      "total_files_per_run": 200,
+      "grand_mean_ms": 5.324,
+      "grand_std_ms": 0.129,
+      "grand_median_ms": 1.8,
+      "per_run_means_ms": [
+        5.224,
+        5.265,
+        5.366,
+        5.234,
+        5.531
+      ],
+      "per_run_medians_ms": [
+        1.742,
+        1.748,
+        1.8,
+        1.831,
+        1.82
+      ],
+      "joern_error_count_total": 0,
+      "hallucinations_per_run": [
+        1438,
+        1438,
+        1438,
+        1438,
+        1438
+      ]
+    }
+  ]
+}

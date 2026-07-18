@@ -1,0 +1,202 @@
+{
+  "experiment": "progressive_groq_llama-3.1-8b-instant",
+  "timestamp": "2026-05-28T07:24:54.895104+00:00",
+  "summary": {
+    "total_programs": 8,
+    "successful_translations": 0,
+    "success_rate": 0.0,
+    "total_hallucinations": 48,
+    "hallucinations_by_category": {
+      "invented": 32,
+      "depth_mismatch": 8,
+      "missing": 8
+    },
+    "avg_confidence": 0.3251,
+    "avg_attempts": 1.0,
+    "avg_time_ms": 1.53
+  },
+  "records": [
+    {
+      "source_file": "1000_minimum_cost_to_merge_stones.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.0,
+      "total_hallucinations": 12,
+      "structural_hallucinations": 12,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 2.2,
+      "hallucination_categories": {
+        "invented": 9,
+        "depth_mismatch": 2,
+        "missing": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.877527+00:00",
+      "tree_edit_distance": 9,
+      "tree_similarity": 0.4,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1015_smallest_integer_divisible_by_k.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.4778,
+      "total_hallucinations": 6,
+      "structural_hallucinations": 6,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 2.11,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 4,
+        "depth_mismatch": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.879883+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1018_binary_prefix_divisible_by_5.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.2778,
+      "total_hallucinations": 8,
+      "structural_hallucinations": 8,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 2.09,
+      "hallucination_categories": {
+        "missing": 2,
+        "invented": 5,
+        "depth_mismatch": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.882203+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.5,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1020_number_of_enclaves.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.6125,
+      "total_hallucinations": 4,
+      "structural_hallucinations": 4,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 1.47,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 2,
+        "depth_mismatch": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.883910+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1030_matrix_cells_in_distance_order.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.2,
+      "total_hallucinations": 1,
+      "structural_hallucinations": 1,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.27,
+      "hallucination_categories": {
+        "invented": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.884378+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1033_moving_stones_until_consecutive.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.06,
+      "total_hallucinations": 6,
+      "structural_hallucinations": 6,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 0.94,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 4,
+        "depth_mismatch": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.885493+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.5,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1048_longest_string_chain.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.53,
+      "total_hallucinations": 6,
+      "structural_hallucinations": 6,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 1.96,
+      "hallucination_categories": {
+        "missing": 1,
+        "invented": 4,
+        "depth_mismatch": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.887647+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6923,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    },
+    {
+      "source_file": "1053_previous_permutation_with_one_swap.c",
+      "model": "groq_llama-3.1-8b-instant",
+      "success": false,
+      "attempts": 1,
+      "final_confidence": 0.4429,
+      "total_hallucinations": 5,
+      "structural_hallucinations": 5,
+      "semantic_hallucinations": 0,
+      "tolerated_idioms": 0,
+      "total_time_ms": 1.19,
+      "hallucination_categories": {
+        "invented": 3,
+        "missing": 1,
+        "depth_mismatch": 1
+      },
+      "timestamp": "2026-05-28T07:24:54.889042+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
+    }
+  ]
+}

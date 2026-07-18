@@ -1,6 +1,6 @@
 {
   "experiment": "structural_only_groq_llama-3.3-70b-versatile",
-  "timestamp": "2026-05-26T15:34:35.557841+00:00",
+  "timestamp": "2026-05-28T07:14:48.547018+00:00",
   "summary": {
     "total_programs": 200,
     "successful_translations": 61,
@@ -13,7 +13,7 @@
     },
     "avg_confidence": 0.709,
     "avg_attempts": 1.0,
-    "avg_time_ms": 0.45
+    "avg_time_ms": 2.3
   },
   "records": [
     {
@@ -26,12 +26,17 @@
       "structural_hallucinations": 6,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 3.71,
+      "total_time_ms": 2.37,
       "hallucination_categories": {
         "invented": 5,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.449610+00:00"
+      "timestamp": "2026-05-28T07:14:48.050967+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.5833,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1013_partition_array_into_three_parts_with_equal_sum.c",
@@ -43,12 +48,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.89,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.450042+00:00"
+      "timestamp": "2026-05-28T07:14:48.051991+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8571,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1014_best_sightseeing_pair.c",
@@ -60,11 +70,16 @@
       "structural_hallucinations": 1,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.56,
       "hallucination_categories": {
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.450351+00:00"
+      "timestamp": "2026-05-28T07:14:48.052652+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1015_smallest_integer_divisible_by_k.c",
@@ -76,13 +91,18 @@
       "structural_hallucinations": 8,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.86,
       "hallucination_categories": {
         "missing": 1,
         "invented": 6,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.450839+00:00"
+      "timestamp": "2026-05-28T07:14:48.054629+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.5714,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1018_binary_prefix_divisible_by_5.c",
@@ -94,11 +114,16 @@
       "structural_hallucinations": 1,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.35,
+      "total_time_ms": 1.56,
       "hallucination_categories": {
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.451270+00:00"
+      "timestamp": "2026-05-28T07:14:48.056378+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1019_next_greater_node_in_linked_list.c",
@@ -110,12 +135,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.26,
+      "total_time_ms": 0.78,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.451613+00:00"
+      "timestamp": "2026-05-28T07:14:48.057351+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1020_number_of_enclaves.c",
@@ -127,9 +157,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.41,
+      "total_time_ms": 1.15,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.452106+00:00"
+      "timestamp": "2026-05-28T07:14:48.058612+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1024_video_stitching.c",
@@ -141,9 +176,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.33,
+      "total_time_ms": 0.85,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.452520+00:00"
+      "timestamp": "2026-05-28T07:14:48.059565+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1030_matrix_cells_in_distance_order.c",
@@ -155,11 +195,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.28,
+      "total_time_ms": 0.29,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.452899+00:00"
+      "timestamp": "2026-05-28T07:14:48.059982+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1032_stream_of_characters.c",
@@ -171,13 +216,18 @@
       "structural_hallucinations": 11,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.77,
+      "total_time_ms": 7.41,
       "hallucination_categories": {
         "invented": 8,
         "depth_mismatch": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.453765+00:00"
+      "timestamp": "2026-05-28T07:14:48.067532+00:00",
+      "tree_edit_distance": 8,
+      "tree_similarity": 0.68,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1033_moving_stones_until_consecutive.c",
@@ -189,12 +239,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.25,
+      "total_time_ms": 0.77,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.454105+00:00"
+      "timestamp": "2026-05-28T07:14:48.068483+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1035_uncrossed_lines.c",
@@ -206,11 +261,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.16,
+      "total_time_ms": 0.35,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.454344+00:00"
+      "timestamp": "2026-05-28T07:14:48.068989+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1037_valid_boomerang.c",
@@ -222,12 +282,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.45,
+      "total_time_ms": 1.57,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.454876+00:00"
+      "timestamp": "2026-05-28T07:14:48.070682+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1046_last_stone_weight.c",
@@ -239,9 +304,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.46,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.455317+00:00"
+      "timestamp": "2026-05-28T07:14:48.072312+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1048_longest_string_chain.c",
@@ -253,12 +323,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.37,
+      "total_time_ms": 1.48,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.455763+00:00"
+      "timestamp": "2026-05-28T07:14:48.073899+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1052_grumpy_bookstore_owner.c",
@@ -270,9 +345,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.23,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.456242+00:00"
+      "timestamp": "2026-05-28T07:14:48.075266+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1053_previous_permutation_with_one_swap.c",
@@ -284,9 +364,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.02,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.456683+00:00"
+      "timestamp": "2026-05-28T07:14:48.076439+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1054_distant_barcodes.c",
@@ -298,12 +383,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.2,
+      "total_time_ms": 0.65,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.456961+00:00"
+      "timestamp": "2026-05-28T07:14:48.077233+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1055_shortest_way_to_form_string.c",
@@ -315,9 +405,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.28,
+      "total_time_ms": 0.73,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.457319+00:00"
+      "timestamp": "2026-05-28T07:14:48.078074+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1056_confusing_number.c",
@@ -329,12 +424,17 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.61,
+      "total_time_ms": 2.82,
       "hallucination_categories": {
         "invented": 4,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.458020+00:00"
+      "timestamp": "2026-05-28T07:14:48.081023+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.625,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "105_construct_binary_tree_from_preorder_and_inorder_traversal.c",
@@ -346,11 +446,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.18,
+      "total_time_ms": 0.33,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.458313+00:00"
+      "timestamp": "2026-05-28T07:14:48.081513+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1060_missing_element_in_sorted_array.c",
@@ -362,9 +467,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.8,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.458716+00:00"
+      "timestamp": "2026-05-28T07:14:48.082427+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1062_longest_repeating_substring.c",
@@ -376,12 +486,17 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.46,
+      "total_time_ms": 2.65,
       "hallucination_categories": {
         "invented": 4,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.459256+00:00"
+      "timestamp": "2026-05-28T07:14:48.085216+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.7143,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1063_number_of_valid_subarrays.c",
@@ -393,9 +508,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.31,
+      "total_time_ms": 1.04,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.459652+00:00"
+      "timestamp": "2026-05-28T07:14:48.086391+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1064_fixed_point.c",
@@ -407,12 +527,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.78,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.460051+00:00"
+      "timestamp": "2026-05-28T07:14:48.087294+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1067_digit_count_in_range.c",
@@ -424,12 +549,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.29,
+      "total_time_ms": 0.79,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.460421+00:00"
+      "timestamp": "2026-05-28T07:14:48.088215+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8571,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "106_construct_binary_tree_from_inorder_and_postorder_traversal.c",
@@ -441,11 +571,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.17,
+      "total_time_ms": 0.27,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.460673+00:00"
+      "timestamp": "2026-05-28T07:14:48.088590+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1085_sum_of_digits_in_the_minimum_number.c",
@@ -457,13 +592,18 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.31,
+      "total_time_ms": 1.22,
       "hallucination_categories": {
         "missing": 1,
         "invented": 5,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.461067+00:00"
+      "timestamp": "2026-05-28T07:14:48.089955+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.5455,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1086_high_five.c",
@@ -475,12 +615,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.17,
+      "total_time_ms": 0.52,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.461321+00:00"
+      "timestamp": "2026-05-28T07:14:48.090722+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1089_duplicate_zeros.c",
@@ -492,9 +637,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.35,
+      "total_time_ms": 0.81,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.461747+00:00"
+      "timestamp": "2026-05-28T07:14:48.091659+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1099_two_sum_less_than_k.c",
@@ -506,9 +656,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.81,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.462160+00:00"
+      "timestamp": "2026-05-28T07:14:48.092577+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "10_regular_expression_matching.c",
@@ -520,12 +675,17 @@
       "structural_hallucinations": 9,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.82,
+      "total_time_ms": 4.63,
       "hallucination_categories": {
         "invented": 8,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.463062+00:00"
+      "timestamp": "2026-05-28T07:14:48.097414+00:00",
+      "tree_edit_distance": 8,
+      "tree_similarity": 0.6,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1103_distribute_candies_to_people.c",
@@ -537,13 +697,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.38,
+      "total_time_ms": 1.85,
       "hallucination_categories": {
         "invented": 3,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.463550+00:00"
+      "timestamp": "2026-05-28T07:14:48.099661+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.625,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1105_filling_bookcase_shelves.c",
@@ -555,9 +720,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.43,
+      "total_time_ms": 1.2,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.464065+00:00"
+      "timestamp": "2026-05-28T07:14:48.100996+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1118_number_of_days_in_a_month.c",
@@ -569,12 +739,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.33,
+      "total_time_ms": 1.41,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.464477+00:00"
+      "timestamp": "2026-05-28T07:14:48.102546+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1121_divide_array_into_increasing_sequences.c",
@@ -586,9 +761,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.57,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.464967+00:00"
+      "timestamp": "2026-05-28T07:14:48.104295+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1124_longest_well_performing_interval.c",
@@ -600,13 +780,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 1.05,
+      "total_time_ms": 28.14,
       "hallucination_categories": {
         "missing": 1,
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.466103+00:00"
+      "timestamp": "2026-05-28T07:14:48.132800+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.9355,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1133_largest_unique_number.c",
@@ -618,12 +803,17 @@
       "structural_hallucinations": 6,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.42,
+      "total_time_ms": 3.46,
       "hallucination_categories": {
         "invented": 5,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.466619+00:00"
+      "timestamp": "2026-05-28T07:14:48.136563+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.6154,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1134_armstrong_number.c",
@@ -635,12 +825,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.29,
+      "total_time_ms": 1.53,
       "hallucination_categories": {
         "invented": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.466996+00:00"
+      "timestamp": "2026-05-28T07:14:48.138379+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7143,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1139_largest_1_bordered_square.c",
@@ -652,12 +847,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.37,
+      "total_time_ms": 1.96,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.467447+00:00"
+      "timestamp": "2026-05-28T07:14:48.140619+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1143_longest_common_subsequence.c",
@@ -669,12 +869,17 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.49,
+      "total_time_ms": 3.81,
       "hallucination_categories": {
         "invented": 3,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.468020+00:00"
+      "timestamp": "2026-05-28T07:14:48.144685+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1144_decrease_elements_to_make_array_zigzag.c",
@@ -686,9 +891,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 2.27,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.468544+00:00"
+      "timestamp": "2026-05-28T07:14:48.147337+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
@@ -700,9 +910,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 1.49,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.468921+00:00"
+      "timestamp": "2026-05-28T07:14:48.149115+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1151_minimum_swaps_to_group_all_1s_together.c",
@@ -714,13 +929,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.91,
       "hallucination_categories": {
         "missing": 1,
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.469405+00:00"
+      "timestamp": "2026-05-28T07:14:48.151249+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1153_string_transforms_into_another_string.c",
@@ -732,13 +952,18 @@
       "structural_hallucinations": 23,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.95,
+      "total_time_ms": 13.88,
       "hallucination_categories": {
         "invented": 15,
         "depth_mismatch": 1,
         "missing": 7
       },
-      "timestamp": "2026-05-26T15:34:35.470456+00:00"
+      "timestamp": "2026-05-28T07:14:48.165482+00:00",
+      "tree_edit_distance": 25,
+      "tree_similarity": 0.2188,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1154_day_of_the_year.c",
@@ -750,12 +975,17 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.59,
+      "total_time_ms": 5.96,
       "hallucination_categories": {
         "invented": 4,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.471174+00:00"
+      "timestamp": "2026-05-28T07:14:48.171879+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.7333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1155_number_of_dice_rolls_with_target_sum.c",
@@ -767,12 +997,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 2.9,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.471719+00:00"
+      "timestamp": "2026-05-28T07:14:48.175240+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8571,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "115_distinct_subsequences.c",
@@ -784,13 +1019,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.5,
+      "total_time_ms": 4.17,
       "hallucination_categories": {
         "invented": 3,
         "depth_mismatch": 1,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.472311+00:00"
+      "timestamp": "2026-05-28T07:14:48.179762+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1163_last_substring_in_lexicographical_order.c",
@@ -802,12 +1042,17 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.47,
+      "total_time_ms": 3.67,
       "hallucination_categories": {
         "invented": 6,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.472864+00:00"
+      "timestamp": "2026-05-28T07:14:48.183870+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.625,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1166_design_file_system.c",
@@ -819,12 +1064,17 @@
       "structural_hallucinations": 8,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 1.06,
+      "total_time_ms": 22.46,
       "hallucination_categories": {
         "invented": 7,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.474009+00:00"
+      "timestamp": "2026-05-28T07:14:48.206546+00:00",
+      "tree_edit_distance": 17,
+      "tree_similarity": 0.6304,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1168_optimize_water_distribution_in_a_village.c",
@@ -836,9 +1086,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 0.92,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.474395+00:00"
+      "timestamp": "2026-05-28T07:14:48.207680+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1175_prime_arrangements.c",
@@ -850,12 +1105,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.62,
+      "total_time_ms": 2.93,
       "hallucination_categories": {
         "invented": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.475093+00:00"
+      "timestamp": "2026-05-28T07:14:48.210758+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.7333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1176_diet_plan_performance.c",
@@ -867,12 +1127,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.41,
+      "total_time_ms": 1.31,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.475586+00:00"
+      "timestamp": "2026-05-28T07:14:48.212193+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1180_count_substrings_with_only_one_distinct_letter.c",
@@ -884,13 +1149,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.16,
       "hallucination_categories": {
         "invented": 3,
         "depth_mismatch": 1,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.476038+00:00"
+      "timestamp": "2026-05-28T07:14:48.213489+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1183_maximum_number_of_ones.c",
@@ -902,12 +1172,17 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.8,
+      "total_time_ms": 4.24,
       "hallucination_categories": {
         "missing": 1,
         "invented": 6
       },
-      "timestamp": "2026-05-26T15:34:35.476930+00:00"
+      "timestamp": "2026-05-28T07:14:48.217899+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1191_k_concatenation_maximum_sum.c",
@@ -919,12 +1194,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.62,
+      "total_time_ms": 2.58,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.477642+00:00"
+      "timestamp": "2026-05-28T07:14:48.220777+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9091,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "11_container_with_most_water.c",
@@ -936,9 +1216,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.38,
+      "total_time_ms": 1.27,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.478120+00:00"
+      "timestamp": "2026-05-28T07:14:48.222221+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1201_ugly_number_iii.c",
@@ -950,12 +1235,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.67,
+      "total_time_ms": 2.53,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.478899+00:00"
+      "timestamp": "2026-05-28T07:14:48.224950+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9167,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1208_get_equal_substrings_within_budget.c",
@@ -967,12 +1257,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.35,
+      "total_time_ms": 1.52,
       "hallucination_categories": {
         "invented": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.479334+00:00"
+      "timestamp": "2026-05-28T07:14:48.226659+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1210_minimum_moves_to_reach_target_with_rotations.c",
@@ -984,9 +1279,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.85,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.479737+00:00"
+      "timestamp": "2026-05-28T07:14:48.227631+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1217_minimum_cost_to_move_chips_to_the_same_position.c",
@@ -998,13 +1298,18 @@
       "structural_hallucinations": 19,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.89,
+      "total_time_ms": 5.48,
       "hallucination_categories": {
         "invented": 9,
         "missing": 8,
         "depth_mismatch": 2
       },
-      "timestamp": "2026-05-26T15:34:35.480724+00:00"
+      "timestamp": "2026-05-28T07:14:48.233271+00:00",
+      "tree_edit_distance": 18,
+      "tree_similarity": 0.3793,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1218_longest_arithmetic_subsequence_of_given_difference.c",
@@ -1016,11 +1321,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.16,
+      "total_time_ms": 0.37,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.480975+00:00"
+      "timestamp": "2026-05-28T07:14:48.233837+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1219_path_with_maximum_gold.c",
@@ -1032,13 +1342,18 @@
       "structural_hallucinations": 17,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 1.16,
+      "total_time_ms": 34.22,
       "hallucination_categories": {
         "missing": 6,
         "depth_mismatch": 2,
         "invented": 9
       },
-      "timestamp": "2026-05-26T15:34:35.482236+00:00"
+      "timestamp": "2026-05-28T07:14:48.268227+00:00",
+      "tree_edit_distance": 9,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1221_split_a_string_in_balanced_strings.c",
@@ -1050,9 +1365,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 0.88,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.482653+00:00"
+      "timestamp": "2026-05-28T07:14:48.269278+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "122_best_time_to_buy_and_sell_stock_ii.c",
@@ -1064,9 +1384,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.35,
+      "total_time_ms": 0.77,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.483090+00:00"
+      "timestamp": "2026-05-28T07:14:48.270186+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1231_divide_chocolate.c",
@@ -1078,9 +1403,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.29,
+      "total_time_ms": 0.75,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.483475+00:00"
+      "timestamp": "2026-05-28T07:14:48.271056+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1236_web_crawler.c",
@@ -1092,12 +1422,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.25,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.483930+00:00"
+      "timestamp": "2026-05-28T07:14:48.272431+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1250_check_if_it_is_a_good_array.c",
@@ -1109,9 +1444,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.31,
+      "total_time_ms": 0.83,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.484325+00:00"
+      "timestamp": "2026-05-28T07:14:48.273362+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1259_handshakes_that_dont_cross.c",
@@ -1123,12 +1463,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.38,
+      "total_time_ms": 0.82,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.484788+00:00"
+      "timestamp": "2026-05-28T07:14:48.274290+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1260_shift_2d_grid.c",
@@ -1140,13 +1485,18 @@
       "structural_hallucinations": 6,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.48,
+      "total_time_ms": 1.77,
       "hallucination_categories": {
         "invented": 4,
         "depth_mismatch": 1,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.485357+00:00"
+      "timestamp": "2026-05-28T07:14:48.276176+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1261_find_elements_in_a_contaminated_binary_tree.c",
@@ -1158,11 +1508,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.29,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.485667+00:00"
+      "timestamp": "2026-05-28T07:14:48.276583+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1263_minimum_moves_to_move_a_box_to_their_target_location.c",
@@ -1174,12 +1529,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.54,
+      "total_time_ms": 0.99,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.486304+00:00"
+      "timestamp": "2026-05-28T07:14:48.277687+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1269_number_of_ways_to_stay_in_the_same_place_after_some_steps.c",
@@ -1191,12 +1551,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.56,
+      "total_time_ms": 1.65,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.486958+00:00"
+      "timestamp": "2026-05-28T07:14:48.279451+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1273_delete_tree_nodes.c",
@@ -1208,12 +1573,17 @@
       "structural_hallucinations": 8,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.74,
+      "total_time_ms": 3.71,
       "hallucination_categories": {
         "invented": 7,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.487792+00:00"
+      "timestamp": "2026-05-28T07:14:48.283301+00:00",
+      "tree_edit_distance": 20,
+      "tree_similarity": 0.2593,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1275_find_winner_on_a_tic_tac_toe_game.c",
@@ -1225,13 +1595,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.56,
+      "total_time_ms": 3.96,
       "hallucination_categories": {
         "invented": 1,
         "missing": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.488442+00:00"
+      "timestamp": "2026-05-28T07:14:48.287495+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1276_number_of_burgers_with_no_waste_of_ingredients.c",
@@ -1243,13 +1618,18 @@
       "structural_hallucinations": 13,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.86,
       "hallucination_categories": {
         "missing": 6,
         "depth_mismatch": 2,
         "invented": 5
       },
-      "timestamp": "2026-05-26T15:34:35.488935+00:00"
+      "timestamp": "2026-05-28T07:14:48.289596+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1284_minimum_number_of_flips_to_convert_binary_matrix_to_zero_matrix.c",
@@ -1261,12 +1641,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 1.5,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.489473+00:00"
+      "timestamp": "2026-05-28T07:14:48.291252+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1286_iterator_for_combination.c",
@@ -1278,9 +1663,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.42,
+      "total_time_ms": 1.3,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.489988+00:00"
+      "timestamp": "2026-05-28T07:14:48.292704+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1287_element_appearing_more_than_25_in_sorted_array.c",
@@ -1292,9 +1682,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.31,
+      "total_time_ms": 0.98,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.490384+00:00"
+      "timestamp": "2026-05-28T07:14:48.293816+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1288_remove_covered_intervals.c",
@@ -1306,9 +1701,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.5,
+      "total_time_ms": 1.91,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.490970+00:00"
+      "timestamp": "2026-05-28T07:14:48.295922+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1289_minimum_falling_path_sum_ii.c",
@@ -1320,12 +1720,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.39,
+      "total_time_ms": 1.62,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.491447+00:00"
+      "timestamp": "2026-05-28T07:14:48.297789+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1295_find_numbers_with_even_number_of_digits.c",
@@ -1337,12 +1742,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.25,
+      "total_time_ms": 1.02,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.491775+00:00"
+      "timestamp": "2026-05-28T07:14:48.299147+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1307_verbal_arithmetic_puzzle.c",
@@ -1354,12 +1764,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.66,
+      "total_time_ms": 4.08,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.492517+00:00"
+      "timestamp": "2026-05-28T07:14:48.303462+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1310_xor_queries_of_a_subarray.c",
@@ -1371,9 +1786,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.29,
+      "total_time_ms": 1.5,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.492897+00:00"
+      "timestamp": "2026-05-28T07:14:48.305229+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1317_convert_integer_to_the_sum_of_two_no_zero_integers.c",
@@ -1385,13 +1805,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 1.19,
       "hallucination_categories": {
         "missing": 1,
         "invented": 3,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.493302+00:00"
+      "timestamp": "2026-05-28T07:14:48.306727+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1318_minimum_flips_to_make_a_or_b_equal_to_c.c",
@@ -1403,12 +1828,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.39,
+      "total_time_ms": 0.97,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.493786+00:00"
+      "timestamp": "2026-05-28T07:14:48.307892+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1329_sort_the_matrix_diagonally.c",
@@ -1420,9 +1850,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.95,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.494204+00:00"
+      "timestamp": "2026-05-28T07:14:48.309013+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "132_palindrome_partitioning_ii.c",
@@ -1434,11 +1869,16 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.54,
+      "total_time_ms": 2.14,
       "hallucination_categories": {
         "invented": 2
       },
-      "timestamp": "2026-05-26T15:34:35.494831+00:00"
+      "timestamp": "2026-05-28T07:14:48.311292+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1330_reverse_subarray_to_maximize_array_value.c",
@@ -1450,13 +1890,18 @@
       "structural_hallucinations": 16,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.95,
+      "total_time_ms": 12.43,
       "hallucination_categories": {
         "missing": 6,
         "depth_mismatch": 2,
         "invented": 8
       },
-      "timestamp": "2026-05-26T15:34:35.495872+00:00"
+      "timestamp": "2026-05-28T07:14:48.323974+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.8276,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1332_remove_palindromic_subsequences.c",
@@ -1468,12 +1913,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 0.89,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.496269+00:00"
+      "timestamp": "2026-05-28T07:14:48.325074+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1335_minimum_difficulty_of_a_job_schedule.c",
@@ -1485,9 +1935,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.52,
+      "total_time_ms": 1.74,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.496872+00:00"
+      "timestamp": "2026-05-28T07:14:48.326996+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1339_maximum_product_of_splitted_binary_tree.c",
@@ -1499,11 +1954,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.17,
+      "total_time_ms": 0.43,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.497142+00:00"
+      "timestamp": "2026-05-28T07:14:48.327604+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1343_number_of_sub_arrays_of_size_k_and_average_greater_than_or_equal_to_threshold.c",
@@ -1515,12 +1975,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.67,
+      "total_time_ms": 1.7,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.497891+00:00"
+      "timestamp": "2026-05-28T07:14:48.329441+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "134_gas_station.c",
@@ -1532,9 +1997,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.35,
+      "total_time_ms": 0.78,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.498323+00:00"
+      "timestamp": "2026-05-28T07:14:48.330329+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1357_apply_discount_every_n_orders.c",
@@ -1546,11 +2016,16 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.92,
+      "total_time_ms": 8.91,
       "hallucination_categories": {
         "invented": 4
       },
-      "timestamp": "2026-05-26T15:34:35.499327+00:00"
+      "timestamp": "2026-05-28T07:14:48.339389+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1359_count_all_valid_pickup_and_delivery_options.c",
@@ -1562,12 +2037,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.66,
+      "total_time_ms": 4.36,
       "hallucination_categories": {
         "missing": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.500076+00:00"
+      "timestamp": "2026-05-28T07:14:48.343956+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.8824,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "135_candy.c",
@@ -1579,9 +2059,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.52,
+      "total_time_ms": 2.18,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.500674+00:00"
+      "timestamp": "2026-05-28T07:14:48.346297+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1362_closest_divisors.c",
@@ -1593,13 +2078,18 @@
       "structural_hallucinations": 15,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.37,
+      "total_time_ms": 1.91,
       "hallucination_categories": {
         "missing": 7,
         "depth_mismatch": 2,
         "invented": 6
       },
-      "timestamp": "2026-05-26T15:34:35.501136+00:00"
+      "timestamp": "2026-05-28T07:14:48.348404+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.7,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
@@ -1611,9 +2101,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.34,
+      "total_time_ms": 1.34,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.501552+00:00"
+      "timestamp": "2026-05-28T07:14:48.349936+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "136_single_number.c",
@@ -1625,9 +2120,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.67,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.501848+00:00"
+      "timestamp": "2026-05-28T07:14:48.350745+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1370_increasing_decreasing_string.c",
@@ -1639,12 +2139,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.34,
+      "total_time_ms": 0.96,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.502270+00:00"
+      "timestamp": "2026-05-28T07:14:48.351829+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1373_maximum_sum_bst_in_binary_tree.c",
@@ -1656,11 +2161,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.32,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.502571+00:00"
+      "timestamp": "2026-05-28T07:14:48.352268+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1379_find_a_corresponding_node_of_a_binary_tree_in_a_clone_of_that_tree.c",
@@ -1672,13 +2182,18 @@
       "structural_hallucinations": 8,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.72,
+      "total_time_ms": 3.27,
       "hallucination_categories": {
         "invented": 6,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.503385+00:00"
+      "timestamp": "2026-05-28T07:14:48.355743+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.6471,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "137_single_number_ii.c",
@@ -1690,9 +2205,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.33,
+      "total_time_ms": 0.9,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.503815+00:00"
+      "timestamp": "2026-05-28T07:14:48.356899+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1382_balance_a_binary_search_tree.c",
@@ -1704,11 +2224,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.16,
+      "total_time_ms": 0.28,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.504061+00:00"
+      "timestamp": "2026-05-28T07:14:48.357294+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1385_find_the_distance_value_between_two_arrays.c",
@@ -1720,9 +2245,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.42,
+      "total_time_ms": 1.13,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.504561+00:00"
+      "timestamp": "2026-05-28T07:14:48.358517+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1390_four_divisors.c",
@@ -1734,9 +2264,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.04,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.505040+00:00"
+      "timestamp": "2026-05-28T07:14:48.359652+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1399_count_largest_group.c",
@@ -1748,12 +2283,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.38,
+      "total_time_ms": 1.14,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.505503+00:00"
+      "timestamp": "2026-05-28T07:14:48.360903+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1401_circle_and_rectangle_overlapping.c",
@@ -1765,12 +2305,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.34,
+      "total_time_ms": 1.12,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.505933+00:00"
+      "timestamp": "2026-05-28T07:14:48.362170+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1403_minimum_subsequence_in_non_increasing_order.c",
@@ -1782,13 +2327,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 2.09,
       "hallucination_categories": {
         "missing": 1,
         "invented": 3,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.506459+00:00"
+      "timestamp": "2026-05-28T07:14:48.364395+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.6154,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1404_number_of_steps_to_reduce_a_number_in_binary_representation_to_one.c",
@@ -1800,12 +2350,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.38,
+      "total_time_ms": 1.14,
       "hallucination_categories": {
         "invented": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.506928+00:00"
+      "timestamp": "2026-05-28T07:14:48.365648+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1408_string_matching_in_an_array.c",
@@ -1817,9 +2372,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 0.98,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.507408+00:00"
+      "timestamp": "2026-05-28T07:14:48.366727+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1416_restore_the_array.c",
@@ -1831,12 +2391,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.47,
+      "total_time_ms": 1.38,
       "hallucination_categories": {
         "invented": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.507966+00:00"
+      "timestamp": "2026-05-28T07:14:48.368225+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1420_build_array_where_you_can_find_the_maximum_exactly_k_comparisons.c",
@@ -1848,12 +2413,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 1.11,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.508493+00:00"
+      "timestamp": "2026-05-28T07:14:48.369489+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1426_counting_elements.c",
@@ -1865,9 +2435,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.24,
+      "total_time_ms": 0.63,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.508819+00:00"
+      "timestamp": "2026-05-28T07:14:48.370244+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1437_check_if_all_1s_are_at_least_length_k_places_away.c",
@@ -1879,13 +2454,18 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.61,
+      "total_time_ms": 1.97,
       "hallucination_categories": {
         "invented": 5,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.509511+00:00"
+      "timestamp": "2026-05-28T07:14:48.372328+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.6154,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1444_number_of_ways_of_cutting_a_pizza.c",
@@ -1897,12 +2477,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.26,
+      "total_time_ms": 0.58,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.509890+00:00"
+      "timestamp": "2026-05-28T07:14:48.373016+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1446_consecutive_characters.c",
@@ -1914,12 +2499,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.27,
+      "total_time_ms": 0.7,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.510266+00:00"
+      "timestamp": "2026-05-28T07:14:48.373820+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1447_simplified_fractions.c",
@@ -1931,9 +2521,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.46,
+      "total_time_ms": 2.11,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.510821+00:00"
+      "timestamp": "2026-05-28T07:14:48.376077+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1449_form_largest_integer_with_digits_that_add_up_to_target.c",
@@ -1945,12 +2540,17 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.67,
+      "total_time_ms": 1.42,
       "hallucination_categories": {
         "invented": 4,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.511603+00:00"
+      "timestamp": "2026-05-28T07:14:48.377685+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6364,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1451_rearrange_words_in_a_sentence.c",
@@ -1962,13 +2562,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.56,
+      "total_time_ms": 2.39,
       "hallucination_categories": {
         "missing": 1,
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.512250+00:00"
+      "timestamp": "2026-05-28T07:14:48.380191+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.8462,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1457_pseudo_palindromic_paths_in_a_binary_tree.c",
@@ -1980,12 +2585,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.61,
+      "total_time_ms": 3.01,
       "hallucination_categories": {
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.512940+00:00"
+      "timestamp": "2026-05-28T07:14:48.383330+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.8667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1460_make_two_arrays_equal_by_reversing_subarrays.c",
@@ -1997,13 +2607,18 @@
       "structural_hallucinations": 8,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 1.4,
       "hallucination_categories": {
         "invented": 5,
         "depth_mismatch": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.513472+00:00"
+      "timestamp": "2026-05-28T07:14:48.384909+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.5455,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1461_check_if_a_string_contains_all_binary_codes_of_size_k.c",
@@ -2015,12 +2630,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 0.62,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.513879+00:00"
+      "timestamp": "2026-05-28T07:14:48.385649+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1465_maximum_area_of_a_piece_of_cake_after_horizontal_and_vertical_cuts.c",
@@ -2032,11 +2652,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.2,
+      "total_time_ms": 0.27,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.514166+00:00"
+      "timestamp": "2026-05-28T07:14:48.386018+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1474_delete_n_nodes_after_m_nodes_of_a_linked_list.c",
@@ -2048,11 +2673,16 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.16,
+      "total_time_ms": 0.24,
       "hallucination_categories": {
         "invented": 3
       },
-      "timestamp": "2026-05-26T15:34:35.514415+00:00"
+      "timestamp": "2026-05-28T07:14:48.386356+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1480_running_sum_of_1d_array.c",
@@ -2064,9 +2694,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.23,
+      "total_time_ms": 0.55,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.514725+00:00"
+      "timestamp": "2026-05-28T07:14:48.387002+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1482_minimum_number_of_days_to_make_m_bouquets.c",
@@ -2078,9 +2713,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 0.73,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.515100+00:00"
+      "timestamp": "2026-05-28T07:14:48.387827+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1486_xor_operation_in_an_array.c",
@@ -2092,12 +2732,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.02,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.515545+00:00"
+      "timestamp": "2026-05-28T07:14:48.388983+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1491_average_salary_excluding_the_minimum_and_maximum_salary.c",
@@ -2109,9 +2754,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.24,
+      "total_time_ms": 0.7,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.515865+00:00"
+      "timestamp": "2026-05-28T07:14:48.389806+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "14_longest_common_prefix.c",
@@ -2123,12 +2773,17 @@
       "structural_hallucinations": 6,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 2.32,
       "hallucination_categories": {
         "invented": 5,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.516351+00:00"
+      "timestamp": "2026-05-28T07:14:48.392263+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1500_design_a_file_sharing_system.c",
@@ -2140,12 +2795,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.42,
+      "total_time_ms": 1.25,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.516851+00:00"
+      "timestamp": "2026-05-28T07:14:48.393620+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1503_last_moment_before_all_ants_fall_out_of_a_plank.c",
@@ -2157,11 +2817,16 @@
       "structural_hallucinations": 1,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.33,
+      "total_time_ms": 1.3,
       "hallucination_categories": {
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.517266+00:00"
+      "timestamp": "2026-05-28T07:14:48.395031+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1508_range_sum_of_sorted_subarray_sums.c",
@@ -2173,13 +2838,18 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.52,
+      "total_time_ms": 1.73,
       "hallucination_categories": {
         "invented": 5,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.517884+00:00"
+      "timestamp": "2026-05-28T07:14:48.396911+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.5833,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1513_number_of_substrings_with_only_1s.c",
@@ -2191,12 +2861,17 @@
       "structural_hallucinations": 9,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 1.1,
+      "total_time_ms": 5.6,
       "hallucination_categories": {
         "invented": 8,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.519125+00:00"
+      "timestamp": "2026-05-28T07:14:48.402700+00:00",
+      "tree_edit_distance": 10,
+      "tree_similarity": 0.5833,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1514_path_with_maximum_probability.c",
@@ -2208,12 +2883,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 0.95,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.519664+00:00"
+      "timestamp": "2026-05-28T07:14:48.403895+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1515_best_position_for_a_service_centre.c",
@@ -2225,12 +2905,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.38,
+      "total_time_ms": 1.07,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.520137+00:00"
+      "timestamp": "2026-05-28T07:14:48.405106+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1518_water_bottles.c",
@@ -2242,12 +2927,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.25,
+      "total_time_ms": 0.6,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.520467+00:00"
+      "timestamp": "2026-05-28T07:14:48.405810+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1520_maximum_number_of_non_overlapping_substrings.c",
@@ -2259,12 +2949,17 @@
       "structural_hallucinations": 3,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.35,
+      "total_time_ms": 0.95,
       "hallucination_categories": {
         "invented": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.520905+00:00"
+      "timestamp": "2026-05-28T07:14:48.406858+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1522_diameter_of_n_ary_tree.c",
@@ -2276,13 +2971,18 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.62,
+      "total_time_ms": 2.71,
       "hallucination_categories": {
         "invented": 5,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.521606+00:00"
+      "timestamp": "2026-05-28T07:14:48.409720+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.6875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1523_count_odd_numbers_in_an_interval_range.c",
@@ -2294,12 +2994,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.69,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.521914+00:00"
+      "timestamp": "2026-05-28T07:14:48.410625+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1529_minimum_suffix_flips.c",
@@ -2311,12 +3016,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.51,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.522212+00:00"
+      "timestamp": "2026-05-28T07:14:48.411261+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "152_maximum_product_subarray.c",
@@ -2328,9 +3038,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.4,
+      "total_time_ms": 1.35,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.522686+00:00"
+      "timestamp": "2026-05-28T07:14:48.412718+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "153_find_minimum_in_rotated_sorted_array.c",
@@ -2342,9 +3057,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.28,
+      "total_time_ms": 0.69,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.523044+00:00"
+      "timestamp": "2026-05-28T07:14:48.413522+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1540_can_convert_string_in_k_moves.c",
@@ -2356,13 +3076,18 @@
       "structural_hallucinations": 9,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.56,
+      "total_time_ms": 4.47,
       "hallucination_categories": {
         "invented": 7,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.523690+00:00"
+      "timestamp": "2026-05-28T07:14:48.418131+00:00",
+      "tree_edit_distance": 7,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1541_minimum_insertions_to_balance_a_parentheses_string.c",
@@ -2374,13 +3099,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 1.99,
       "hallucination_categories": {
         "invented": 3,
         "depth_mismatch": 1,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.524224+00:00"
+      "timestamp": "2026-05-28T07:14:48.420287+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.7273,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1542_find_longest_awesome_substring.c",
@@ -2392,12 +3122,17 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.37,
+      "total_time_ms": 1.46,
       "hallucination_categories": {
         "invented": 3,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.524699+00:00"
+      "timestamp": "2026-05-28T07:14:48.421873+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.7273,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1545_find_kth_bit_in_nth_binary_string.c",
@@ -2409,11 +3144,16 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.55,
+      "total_time_ms": 1.82,
       "hallucination_categories": {
         "invented": 4
       },
-      "timestamp": "2026-05-26T15:34:35.525357+00:00"
+      "timestamp": "2026-05-28T07:14:48.423866+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6923,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1548_the_most_similar_path_in_a_graph.c",
@@ -2425,9 +3165,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.31,
+      "total_time_ms": 1.01,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.525745+00:00"
+      "timestamp": "2026-05-28T07:14:48.425108+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "154_find_minimum_in_rotated_sorted_array_ii.c",
@@ -2439,12 +3184,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.34,
+      "total_time_ms": 0.98,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.526165+00:00"
+      "timestamp": "2026-05-28T07:14:48.426221+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8571,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1551_minimum_operations_to_make_array_equal.c",
@@ -2456,12 +3206,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.17,
+      "total_time_ms": 0.41,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.526415+00:00"
+      "timestamp": "2026-05-28T07:14:48.426731+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1553_minimum_number_of_days_to_eat_n_oranges.c",
@@ -2473,9 +3228,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.39,
+      "total_time_ms": 1.1,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.526878+00:00"
+      "timestamp": "2026-05-28T07:14:48.427936+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1560_most_visited_sector_in_a_circular_track.c",
@@ -2487,9 +3247,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.26,
+      "total_time_ms": 0.65,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.527218+00:00"
+      "timestamp": "2026-05-28T07:14:48.428681+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1564_put_boxes_into_the_warehouse_i.c",
@@ -2501,9 +3266,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.42,
+      "total_time_ms": 1.34,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.527717+00:00"
+      "timestamp": "2026-05-28T07:14:48.430126+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1567_maximum_length_of_subarray_with_positive_product.c",
@@ -2515,13 +3285,18 @@
       "structural_hallucinations": 9,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.55,
+      "total_time_ms": 3.1,
       "hallucination_categories": {
         "invented": 6,
         "depth_mismatch": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.528351+00:00"
+      "timestamp": "2026-05-28T07:14:48.433395+00:00",
+      "tree_edit_distance": 6,
+      "tree_similarity": 0.6471,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1570_dot_product_of_two_sparse_vectors.c",
@@ -2533,9 +3308,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.3,
+      "total_time_ms": 0.77,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.528732+00:00"
+      "timestamp": "2026-05-28T07:14:48.434271+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1575_count_all_possible_routes.c",
@@ -2547,9 +3327,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.51,
+      "total_time_ms": 2.21,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.529322+00:00"
+      "timestamp": "2026-05-28T07:14:48.436593+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1578_minimum_time_to_make_rope_colorful.c",
@@ -2561,11 +3346,16 @@
       "structural_hallucinations": 1,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.41,
+      "total_time_ms": 1.37,
       "hallucination_categories": {
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.529811+00:00"
+      "timestamp": "2026-05-28T07:14:48.438107+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "157_read_n_characters_given_read4.c",
@@ -2577,12 +3367,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.41,
+      "total_time_ms": 1.67,
       "hallucination_categories": {
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.530303+00:00"
+      "timestamp": "2026-05-28T07:14:48.439923+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8889,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1580_put_boxes_into_the_warehouse_ii.c",
@@ -2594,11 +3389,16 @@
       "structural_hallucinations": 1,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.29,
+      "total_time_ms": 0.69,
       "hallucination_categories": {
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.530676+00:00"
+      "timestamp": "2026-05-28T07:14:48.440729+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1584_min_cost_to_connect_all_points.c",
@@ -2610,12 +3410,17 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.37,
+      "total_time_ms": 1.18,
       "hallucination_categories": {
         "invented": 4,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.531127+00:00"
+      "timestamp": "2026-05-28T07:14:48.442009+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6364,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1585_check_if_string_is_transformable_with_substring_sort_operations.c",
@@ -2627,12 +3432,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.28,
+      "total_time_ms": 0.75,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.531490+00:00"
+      "timestamp": "2026-05-28T07:14:48.442860+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.875,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1586_binary_search_tree_iterator_ii.c",
@@ -2644,13 +3454,18 @@
       "structural_hallucinations": 19,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 1.06,
+      "total_time_ms": 8.7,
       "hallucination_categories": {
         "invented": 11,
         "depth_mismatch": 2,
         "missing": 6
       },
-      "timestamp": "2026-05-26T15:34:35.532679+00:00"
+      "timestamp": "2026-05-28T07:14:48.451755+00:00",
+      "tree_edit_distance": 21,
+      "tree_similarity": 0.2759,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1588_sum_of_all_odd_length_subarrays.c",
@@ -2662,9 +3477,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.29,
+      "total_time_ms": 0.87,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.533069+00:00"
+      "timestamp": "2026-05-28T07:14:48.452942+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1590_make_sum_divisible_by_p.c",
@@ -2676,13 +3496,18 @@
       "structural_hallucinations": 23,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.9,
+      "total_time_ms": 7.03,
       "hallucination_categories": {
         "invented": 11,
         "depth_mismatch": 3,
         "missing": 9
       },
-      "timestamp": "2026-05-26T15:34:35.534064+00:00"
+      "timestamp": "2026-05-28T07:14:48.460114+00:00",
+      "tree_edit_distance": 21,
+      "tree_similarity": 0.2759,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1598_crawler_log_folder.c",
@@ -2694,13 +3519,18 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.45,
+      "total_time_ms": 2.03,
       "hallucination_categories": {
         "missing": 1,
         "invented": 5,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.534605+00:00"
+      "timestamp": "2026-05-28T07:14:48.462334+00:00",
+      "tree_edit_distance": 5,
+      "tree_similarity": 0.6429,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1599_maximum_profit_of_operating_a_centennial_wheel.c",
@@ -2712,9 +3542,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.41,
+      "total_time_ms": 1.38,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.535100+00:00"
+      "timestamp": "2026-05-28T07:14:48.463873+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1603_design_parking_system.c",
@@ -2726,9 +3561,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.22,
+      "total_time_ms": 0.69,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.535393+00:00"
+      "timestamp": "2026-05-28T07:14:48.464707+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1605_find_valid_matrix_given_row_and_column_sums.c",
@@ -2740,11 +3580,16 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.47,
+      "total_time_ms": 1.67,
       "hallucination_categories": {
         "missing": 2
       },
-      "timestamp": "2026-05-26T15:34:35.535939+00:00"
+      "timestamp": "2026-05-28T07:14:48.466536+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.8182,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1608_special_array_with_x_elements_greater_than_or_equal_x.c",
@@ -2756,12 +3601,17 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.41,
+      "total_time_ms": 2.3,
       "hallucination_categories": {
         "invented": 3,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.536430+00:00"
+      "timestamp": "2026-05-28T07:14:48.469016+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.7143,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1610_maximum_number_of_visible_points.c",
@@ -2773,12 +3623,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.24,
+      "total_time_ms": 0.58,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.536754+00:00"
+      "timestamp": "2026-05-28T07:14:48.469709+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1615_maximal_network_rank.c",
@@ -2790,9 +3645,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 1.32,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.537269+00:00"
+      "timestamp": "2026-05-28T07:14:48.471140+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1616_split_two_strings_to_make_palindrome.c",
@@ -2804,9 +3664,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.82,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.537707+00:00"
+      "timestamp": "2026-05-28T07:14:48.473151+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1617_count_subtrees_with_max_distance_between_cities.c",
@@ -2818,13 +3683,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.33,
+      "total_time_ms": 1.07,
       "hallucination_categories": {
         "missing": 1,
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.538124+00:00"
+      "timestamp": "2026-05-28T07:14:48.474420+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "161_one_edit_distance.c",
@@ -2836,13 +3706,18 @@
       "structural_hallucinations": 9,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.61,
+      "total_time_ms": 5.66,
       "hallucination_categories": {
         "invented": 7,
         "depth_mismatch": 1,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.538849+00:00"
+      "timestamp": "2026-05-28T07:14:48.480267+00:00",
+      "tree_edit_distance": 7,
+      "tree_similarity": 0.6818,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1620_coordinate_with_maximum_network_quality.c",
@@ -2854,12 +3729,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.42,
+      "total_time_ms": 1.88,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.539366+00:00"
+      "timestamp": "2026-05-28T07:14:48.482372+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.9,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1621_number_of_sets_of_k_non_overlapping_line_segments.c",
@@ -2871,11 +3751,16 @@
       "structural_hallucinations": 1,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.56,
+      "total_time_ms": 1.26,
       "hallucination_categories": {
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.540006+00:00"
+      "timestamp": "2026-05-28T07:14:48.483782+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.6667,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1624_largest_substring_between_two_equal_characters.c",
@@ -2887,13 +3772,18 @@
       "structural_hallucinations": 10,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.99,
+      "total_time_ms": 18.53,
       "hallucination_categories": {
         "invented": 7,
         "depth_mismatch": 2,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.541091+00:00"
+      "timestamp": "2026-05-28T07:14:48.502464+00:00",
+      "tree_edit_distance": 7,
+      "tree_similarity": 0.7941,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1626_best_team_with_no_conflicts.c",
@@ -2905,13 +3795,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.3,
       "hallucination_categories": {
         "missing": 1,
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.541546+00:00"
+      "timestamp": "2026-05-28T07:14:48.503951+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1627_graph_connectivity_with_threshold.c",
@@ -2923,9 +3818,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.36,
+      "total_time_ms": 1.2,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.541990+00:00"
+      "timestamp": "2026-05-28T07:14:48.505266+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "162_find_peak_element.c",
@@ -2937,9 +3837,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.28,
+      "total_time_ms": 0.71,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.542351+00:00"
+      "timestamp": "2026-05-28T07:14:48.506083+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1630_arithmetic_subarrays.c",
@@ -2951,12 +3856,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.2,
+      "total_time_ms": 0.46,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.542628+00:00"
+      "timestamp": "2026-05-28T07:14:48.506653+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1637_widest_vertical_area_between_two_points_containing_no_points.c",
@@ -2968,13 +3878,18 @@
       "structural_hallucinations": 6,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.68,
+      "total_time_ms": 3.61,
       "hallucination_categories": {
         "invented": 4,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.543396+00:00"
+      "timestamp": "2026-05-28T07:14:48.510402+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1639_number_of_ways_to_form_a_target_string_given_a_dictionary.c",
@@ -2986,12 +3901,17 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.76,
+      "total_time_ms": 3.24,
       "hallucination_categories": {
         "invented": 4,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.544241+00:00"
+      "timestamp": "2026-05-28T07:14:48.513835+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1641_count_sorted_vowel_strings.c",
@@ -3003,11 +3923,16 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.39,
+      "total_time_ms": 1.4,
       "hallucination_categories": {
         "invented": 2
       },
-      "timestamp": "2026-05-26T15:34:35.544714+00:00"
+      "timestamp": "2026-05-28T07:14:48.515488+00:00",
+      "tree_edit_distance": 4,
+      "tree_similarity": 0.6364,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1642_furthest_building_you_can_reach.c",
@@ -3019,12 +3944,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.25,
+      "total_time_ms": 0.63,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.545053+00:00"
+      "timestamp": "2026-05-28T07:14:48.516243+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1646_get_maximum_in_generated_array.c",
@@ -3036,12 +3966,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.33,
+      "total_time_ms": 0.7,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.545488+00:00"
+      "timestamp": "2026-05-28T07:14:48.517055+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8333,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1647_minimum_deletions_to_make_character_frequencies_unique.c",
@@ -3053,11 +3988,16 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.37,
+      "total_time_ms": 0.87,
       "hallucination_categories": {
         "missing": 2
       },
-      "timestamp": "2026-05-26T15:34:35.545975+00:00"
+      "timestamp": "2026-05-28T07:14:48.518025+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1648_sell_diminishing_valued_colored_balls.c",
@@ -3069,13 +4009,18 @@
       "structural_hallucinations": 5,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.39,
+      "total_time_ms": 1.63,
       "hallucination_categories": {
         "invented": 3,
         "depth_mismatch": 1,
         "missing": 1
       },
-      "timestamp": "2026-05-26T15:34:35.546453+00:00"
+      "timestamp": "2026-05-28T07:14:48.519769+00:00",
+      "tree_edit_distance": 3,
+      "tree_similarity": 0.7273,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1656_design_an_ordered_stream.c",
@@ -3087,9 +4032,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.47,
+      "total_time_ms": 2.15,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.547023+00:00"
+      "timestamp": "2026-05-28T07:14:48.522080+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1657_determine_if_two_strings_are_close.c",
@@ -3101,12 +4051,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 0.93,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.547422+00:00"
+      "timestamp": "2026-05-28T07:14:48.523138+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.8571,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "165_compare_version_numbers.c",
@@ -3118,13 +4073,18 @@
       "structural_hallucinations": 12,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.66,
+      "total_time_ms": 5.21,
       "hallucination_categories": {
         "invented": 10,
         "missing": 1,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.548167+00:00"
+      "timestamp": "2026-05-28T07:14:48.528489+00:00",
+      "tree_edit_distance": 10,
+      "tree_similarity": 0.5833,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1662_check_if_two_string_arrays_are_equivalent.c",
@@ -3136,9 +4096,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.44,
+      "total_time_ms": 1.49,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.548689+00:00"
+      "timestamp": "2026-05-28T07:14:48.530209+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1664_ways_to_make_a_fair_array.c",
@@ -3150,9 +4115,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.48,
+      "total_time_ms": 1.63,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.549248+00:00"
+      "timestamp": "2026-05-28T07:14:48.531954+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1671_minimum_number_of_removals_to_make_mountain_array.c",
@@ -3164,9 +4134,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.47,
+      "total_time_ms": 1.08,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.549799+00:00"
+      "timestamp": "2026-05-28T07:14:48.533138+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1674_minimum_moves_to_make_array_complementary.c",
@@ -3178,12 +4153,17 @@
       "structural_hallucinations": 2,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.18,
+      "total_time_ms": 0.44,
       "hallucination_categories": {
         "missing": 1,
         "invented": 1
       },
-      "timestamp": "2026-05-26T15:34:35.550055+00:00"
+      "timestamp": "2026-05-28T07:14:48.533683+00:00",
+      "tree_edit_distance": 1,
+      "tree_similarity": 0.75,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1679_max_number_of_k_sum_pairs.c",
@@ -3195,9 +4175,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.52,
+      "total_time_ms": 2.4,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.550655+00:00"
+      "timestamp": "2026-05-28T07:14:48.536225+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "167_two_sum_ii_input_array_is_sorted.c",
@@ -3209,9 +4194,14 @@
       "structural_hallucinations": 0,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.32,
+      "total_time_ms": 1.03,
       "hallucination_categories": {},
-      "timestamp": "2026-05-26T15:34:35.551047+00:00"
+      "timestamp": "2026-05-28T07:14:48.537466+00:00",
+      "tree_edit_distance": 0,
+      "tree_similarity": 1.0,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1684_count_the_number_of_consistent_strings.c",
@@ -3223,13 +4213,18 @@
       "structural_hallucinations": 4,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.62,
+      "total_time_ms": 1.35,
       "hallucination_categories": {
         "missing": 1,
         "invented": 2,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.551749+00:00"
+      "timestamp": "2026-05-28T07:14:48.538936+00:00",
+      "tree_edit_distance": 2,
+      "tree_similarity": 0.7778,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     },
     {
       "source_file": "1686_stone_game_vi.c",
@@ -3241,12 +4236,17 @@
       "structural_hallucinations": 7,
       "semantic_hallucinations": 0,
       "tolerated_idioms": 0,
-      "total_time_ms": 0.92,
+      "total_time_ms": 2.8,
       "hallucination_categories": {
         "invented": 6,
         "depth_mismatch": 1
       },
-      "timestamp": "2026-05-26T15:34:35.552769+00:00"
+      "timestamp": "2026-05-28T07:14:48.541890+00:00",
+      "tree_edit_distance": 11,
+      "tree_similarity": 0.4211,
+      "data_flow_jaccard": null,
+      "control_dep_jaccard": null,
+      "tversky_index": null
     }
   ]
 }

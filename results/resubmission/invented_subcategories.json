@@ -1,0 +1,43 @@
+{
+  "experiment": "invented_subcategorization",
+  "per_model": {
+    "groq_llama-3.1-8b-instant": {
+      "extra_loop": 3,
+      "extra_function_call": 4,
+      "helper_variable": 2,
+      "other": 2
+    },
+    "groq_llama-3.3-70b-versatile": {
+      "extra_branch": 11,
+      "extra_return": 6,
+      "other": 68,
+      "extra_function_call": 13,
+      "extra_loop": 14,
+      "helper_variable": 6
+    },
+    "ollama_llama3.1_8b": {
+      "extra_branch": 13,
+      "extra_function_call": 43,
+      "other": 98,
+      "extra_loop": 45,
+      "helper_variable": 39,
+      "extra_return": 2
+    },
+    "ollama_qwen2.5-coder_7b": {
+      "extra_branch": 12,
+      "extra_function_call": 69,
+      "other": 79,
+      "extra_loop": 60,
+      "helper_variable": 53,
+      "extra_return": 1
+    }
+  },
+  "total": {
+    "extra_loop": 122,
+    "extra_function_call": 129,
+    "helper_variable": 100,
+    "other": 247,
+    "extra_branch": 36,
+    "extra_return": 9
+  }
+}

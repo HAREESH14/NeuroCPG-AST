@@ -59,7 +59,24 @@ class ToleranceEngine:
         self,
         enabled_rules: list[str] | None = None,
     ) -> None:
-        self.enabled_rules = set(enabled_rules or self.ALL_RULES)
+        # ``None``  -> activate all rules (default behaviour)
+        # ``[]``    -> activate no rules at all (needed for the "no tolerance"
+        #              condition of the leave-one-out ablation study)
+        if enabled_rules is None:
+            self.enabled_rules = set(self.ALL_RULES)
+        else:
+            self.enabled_rules = set(enabled_rules)
+
+        unknown = self.enabled_rules - set(self.ALL_RULES)
+        if unknown:
+            # A silently ignored rule name would produce a "rule disabled"
+            # ablation row that is indistinguishable from the full pipeline.
+            logger.warning(
+                "Unknown tolerance rule name(s) ignored: %s (known rules: %s)",
+                sorted(unknown),
+                self.ALL_RULES,
+            )
+
         logger.info("Tolerance engine initialized with rules: %s", self.enabled_rules)
 
     def apply_tolerance(

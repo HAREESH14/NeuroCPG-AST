@@ -69,6 +69,56 @@ Output only the corrected Java code — no explanations, no markdown fences.\
 """
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# LLM-as-a-Judge Prompt (verification baseline)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# NOTE: This prompt is byte-identical to the inline prompt used by the
+# original judge baseline (``scripts/llm_judge_baseline.py``) and by the
+# independent-judge experiment (``scripts/resubmission_independent_judge.py``).
+# It is centralised here so that repeated-trial replications
+# (``scripts/resubmission_judge_repeats.py``) provably use a *matched prompt*,
+# as required by Reviewer 2 (Comment 6).
+JUDGE_USER_PROMPT = """\
+You are an expert code equivalence checker.
+I have a C program and its Java translation.
+Tell me if the Java translation contains any structural hallucinations
+(missing loops, invented blocks, wrong nesting) or semantic hallucinations
+(broken variables, wrong types, lost control dependencies).
+
+C Source:
+```c
+{c_code}
+```
+
+Java Target:
+```java
+{java_code}
+```
+
+Respond ONLY with a JSON object matching this schema:
+{{
+    "hallucinations_found": <integer>,
+    "is_equivalent": <boolean>,
+    "explanation": "<short explanation>"
+}}\
+"""
+
+
+def format_judge_prompt(c_code: str, java_code: str) -> list[dict[str, str]]:
+    """Build the messages list for an LLM-as-a-Judge verification request.
+
+    The returned list contains a single user message (no system prompt),
+    matching the original judge protocol exactly.
+    """
+    return [
+        {
+            "role": "user",
+            "content": JUDGE_USER_PROMPT.format(c_code=c_code, java_code=java_code),
+        }
+    ]
+
+
 def format_translation_prompt(source_code: str) -> list[dict[str, str]]:
     """Build the messages list for a translation request."""
     return [

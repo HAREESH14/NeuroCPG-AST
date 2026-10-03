@@ -1,0 +1,122 @@
+{
+  "experiment": "independent_judge",
+  "judge_model": "groq/llama-3.3-70b-versatile",
+  "translator_model": "ollama/llama3.1:8b",
+  "summary": {
+    "total_programs": 10,
+    "total_hallucinations_found_by_judge": 0,
+    "avg_time_ms": 87.6,
+    "parse_errors": 10,
+    "parse_error_rate": 1.0,
+    "comparison_vs_neuroast": {
+      "agree_flagged": 0,
+      "judge_missed": 0,
+      "judge_false_alarm": 0,
+      "agree_clean": 0,
+      "judge_recall_pct": 0,
+      "judge_recall_excl_parse_errors": 0
+    }
+  },
+  "records": [
+    {
+      "file": "1000_minimum_cost_to_merge_stones.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 9,
+      "classification": "PARSE_ERROR",
+      "time_ms": 366.8,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1013_partition_array_into_three_parts_with_equal_sum.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.3,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1014_best_sightseeing_pair.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 50.6,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1015_smallest_integer_divisible_by_k.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.3,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1018_binary_prefix_divisible_by_5.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.3,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1019_next_greater_node_in_linked_list.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.0,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1020_number_of_enclaves.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.0,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1024_video_stitching.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 53.3,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1030_matrix_cells_in_distance_order.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 63.3,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    },
+    {
+      "file": "1032_stream_of_characters.c",
+      "judge_model": "groq/llama-3.3-70b-versatile",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 11,
+      "classification": "PARSE_ERROR",
+      "time_ms": 64.9,
+      "explanation": "API_ERROR: litellm.NotFoundError: NotFoundError: GroqException - 404 page not found\n"
+    }
+  ]
+}

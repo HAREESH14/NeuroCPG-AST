@@ -1,0 +1,228 @@
+{
+  "experiment": "tolerance_rule_ablation",
+  "methodology": "Phase 1 (tree-sitter structural matching) is run once per translation; the resulting hallucination list is then re-filtered by six Tolerance Engine configurations (all rules, no rules, and each single-rule removal). additional_flags_vs_all_rules is the number of extra reported hallucinations when a rule is removed.",
+  "rules": [
+    "loop_to_api",
+    "memory_model",
+    "string_idiom",
+    "error_handling"
+  ],
+  "rule_labels": {
+    "loop_to_api": "Loop $\\rightarrow$ API call",
+    "memory_model": "Memory model (\\texttt{malloc}/\\texttt{free})",
+    "string_idiom": "String idiom (\\texttt{strcmp}/\\texttt{strcat})",
+    "error_handling": "Error handling (return code $\\rightarrow$ exception)"
+  },
+  "per_model": {
+    "groq_llama-3.1-8b-instant": {
+      "files_scored": 8,
+      "raw_phase1_hallucinations": 48,
+      "conditions": {
+        "all_rules": {
+          "remaining": 48,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 0
+        },
+        "no_tolerance": {
+          "remaining": 48,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 0
+        },
+        "minus_loop_to_api": {
+          "remaining": 48,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 0
+        },
+        "minus_memory_model": {
+          "remaining": 48,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 0
+        },
+        "minus_string_idiom": {
+          "remaining": 48,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 0
+        },
+        "minus_error_handling": {
+          "remaining": 48,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 0
+        }
+      }
+    },
+    "groq_llama-3.3-70b-versatile": {
+      "files_scored": 200,
+      "raw_phase1_hallucinations": 634,
+      "conditions": {
+        "all_rules": {
+          "remaining": 477,
+          "suppressed": 157,
+          "suppression_rate": 0.2476,
+          "additional_flags_vs_all_rules": 0
+        },
+        "no_tolerance": {
+          "remaining": 634,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 157
+        },
+        "minus_loop_to_api": {
+          "remaining": 478,
+          "suppressed": 156,
+          "suppression_rate": 0.2461,
+          "additional_flags_vs_all_rules": 1
+        },
+        "minus_memory_model": {
+          "remaining": 479,
+          "suppressed": 155,
+          "suppression_rate": 0.2445,
+          "additional_flags_vs_all_rules": 2
+        },
+        "minus_string_idiom": {
+          "remaining": 631,
+          "suppressed": 3,
+          "suppression_rate": 0.0047,
+          "additional_flags_vs_all_rules": 154
+        },
+        "minus_error_handling": {
+          "remaining": 477,
+          "suppressed": 157,
+          "suppression_rate": 0.2476,
+          "additional_flags_vs_all_rules": 0
+        }
+      }
+    },
+    "ollama_llama3.1_8b": {
+      "files_scored": 200,
+      "raw_phase1_hallucinations": 1202,
+      "conditions": {
+        "all_rules": {
+          "remaining": 951,
+          "suppressed": 251,
+          "suppression_rate": 0.2088,
+          "additional_flags_vs_all_rules": 0
+        },
+        "no_tolerance": {
+          "remaining": 1202,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 251
+        },
+        "minus_loop_to_api": {
+          "remaining": 952,
+          "suppressed": 250,
+          "suppression_rate": 0.208,
+          "additional_flags_vs_all_rules": 1
+        },
+        "minus_memory_model": {
+          "remaining": 955,
+          "suppressed": 247,
+          "suppression_rate": 0.2055,
+          "additional_flags_vs_all_rules": 4
+        },
+        "minus_string_idiom": {
+          "remaining": 1196,
+          "suppressed": 6,
+          "suppression_rate": 0.005,
+          "additional_flags_vs_all_rules": 245
+        },
+        "minus_error_handling": {
+          "remaining": 952,
+          "suppressed": 250,
+          "suppression_rate": 0.208,
+          "additional_flags_vs_all_rules": 1
+        }
+      }
+    },
+    "ollama_qwen2.5-coder_7b": {
+      "files_scored": 200,
+      "raw_phase1_hallucinations": 1798,
+      "conditions": {
+        "all_rules": {
+          "remaining": 1438,
+          "suppressed": 360,
+          "suppression_rate": 0.2002,
+          "additional_flags_vs_all_rules": 0
+        },
+        "no_tolerance": {
+          "remaining": 1798,
+          "suppressed": 0,
+          "suppression_rate": 0.0,
+          "additional_flags_vs_all_rules": 360
+        },
+        "minus_loop_to_api": {
+          "remaining": 1448,
+          "suppressed": 350,
+          "suppression_rate": 0.1947,
+          "additional_flags_vs_all_rules": 10
+        },
+        "minus_memory_model": {
+          "remaining": 1438,
+          "suppressed": 360,
+          "suppression_rate": 0.2002,
+          "additional_flags_vs_all_rules": 0
+        },
+        "minus_string_idiom": {
+          "remaining": 1788,
+          "suppressed": 10,
+          "suppression_rate": 0.0056,
+          "additional_flags_vs_all_rules": 350
+        },
+        "minus_error_handling": {
+          "remaining": 1438,
+          "suppressed": 360,
+          "suppression_rate": 0.2002,
+          "additional_flags_vs_all_rules": 0
+        }
+      }
+    }
+  },
+  "overall": {
+    "files_scored": 608,
+    "raw_phase1_hallucinations": 3682,
+    "conditions": {
+      "all_rules": {
+        "remaining": 2914,
+        "suppressed": 768,
+        "suppression_rate": 0.2086,
+        "additional_flags_vs_all_rules": null
+      },
+      "no_tolerance": {
+        "remaining": 3682,
+        "suppressed": 0,
+        "suppression_rate": 0.0,
+        "additional_flags_vs_all_rules": 768
+      },
+      "minus_loop_to_api": {
+        "remaining": 2926,
+        "suppressed": 756,
+        "suppression_rate": 0.2053,
+        "additional_flags_vs_all_rules": 12
+      },
+      "minus_memory_model": {
+        "remaining": 2920,
+        "suppressed": 762,
+        "suppression_rate": 0.207,
+        "additional_flags_vs_all_rules": 6
+      },
+      "minus_string_idiom": {
+        "remaining": 3663,
+        "suppressed": 19,
+        "suppression_rate": 0.0052,
+        "additional_flags_vs_all_rules": 749
+      },
+      "minus_error_handling": {
+        "remaining": 2915,
+        "suppressed": 767,
+        "suppression_rate": 0.2083,
+        "additional_flags_vs_all_rules": 1
+      }
+    }
+  }
+}

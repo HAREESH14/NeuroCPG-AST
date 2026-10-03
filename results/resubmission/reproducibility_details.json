@@ -1,0 +1,162 @@
+{
+  "experiment": "reproducibility_details",
+  "translation_direction": "C -> Java",
+  "language_pair": [
+    "c",
+    "java"
+  ],
+  "corpus": {
+    "source": "IBM Project CodeNet",
+    "c_programs_available": 1105,
+    "sampling": "Programs were drawn from the CodeNet C corpus of compilable solutions. Every model translated the same deterministic file list (sorted by file name), 200 programs per model; the per-file identifiers are the file names stored under benchmarks/results/<model>/ and are listed in the repository.",
+    "translations_per_model": 200
+  },
+  "models": [
+    {
+      "result_dir": "groq_llama-3.1-8b-instant",
+      "litellm_id": "groq/llama-3.1-8b-instant",
+      "provider": "Groq Cloud API",
+      "family": "Llama 3.1 8B Instruct"
+    },
+    {
+      "result_dir": "groq_llama-3.3-70b-versatile",
+      "litellm_id": "groq/llama-3.3-70b-versatile",
+      "provider": "Groq Cloud API",
+      "family": "Llama 3.3 70B Versatile"
+    },
+    {
+      "result_dir": "ollama_llama3.1_8b",
+      "litellm_id": "ollama/llama3.1:8b",
+      "provider": "Ollama (local / Colab via tunnel)",
+      "family": "Llama 3.1 8B Instruct"
+    },
+    {
+      "result_dir": "ollama_qwen2.5-coder_7b",
+      "litellm_id": "ollama/qwen2.5-coder:7b",
+      "provider": "Ollama (local / Colab via tunnel)",
+      "family": "Qwen2.5-Coder 7B"
+    }
+  ],
+  "translation_prompts": {
+    "system_prompt": "You are an expert C-to-Java code translator. Your goal is to produce a functionally equivalent Java translation of the given C program.\n\nRules:\n1. Preserve all control-flow structures (loops, branches, switch-case) exactly.\n2. Map C functions to Java static methods inside a public class.\n3. Map C arrays to Java arrays.\n4. Map printf/scanf to System.out.println/Scanner as appropriate.\n5. Do NOT add try-catch blocks unless the C code has explicit error handling.\n6. Do NOT change loop types (for\u2192while, while\u2192for) unless absolutely necessary.\n7. Do NOT drop any loops, branches, or return statements.\n8. Output ONLY the Java code \u2014 no explanations, no markdown fences.",
+    "user_prompt_template": "Translate the following C program to Java:\n\n```c\n{source_code}\n```\n\nOutput only the complete Java class. No explanations.",
+    "source": "neuroast.neural.prompts"
+  },
+  "translation_decoding": {
+    "temperature": 0.1,
+    "max_tokens": 4096,
+    "top_p": null,
+    "n": 1,
+    "temperature_source": "scripts/translate_benchmarks.py (Translator(model, temperature=0.1))",
+    "max_tokens_source": "neuroast.neural.translator.Translator default (4096)"
+  },
+  "judge_protocol": {
+    "prompt": "You are an expert code equivalence checker.\nI have a C program and its Java translation.\nTell me if the Java translation contains any structural hallucinations\n(missing loops, invented blocks, wrong nesting) or semantic hallucinations\n(broken variables, wrong types, lost control dependencies).\n\nC Source:\n```c\n{c_code}\n```\n\nJava Target:\n```java\n{java_code}\n```\n\nRespond ONLY with a JSON object matching this schema:\n{{\n    \"hallucinations_found\": <integer>,\n    \"is_equivalent\": <boolean>,\n    \"explanation\": \"<short explanation>\"\n}}",
+    "source": "neuroast.neural.prompts.JUDGE_USER_PROMPT",
+    "decoding": {
+      "temperature": null,
+      "temperature_note": "provider default (no temperature passed by any judge script)",
+      "timeout_seconds": {
+        "self_judge": 60,
+        "independent_judge": 120
+      },
+      "response_format": null,
+      "response_format_note": "No response_format/JSON mode: it is unsupported by the Ollama judge and is therefore omitted for both conditions to keep the prompt and call protocol matched. Responses are parsed with a tolerant JSON extractor."
+    },
+    "self_judge_model": "ollama/llama3.1:8b (the translator itself)",
+    "independent_judge_models": [
+      "gemini/gemini-2.5-flash",
+      "groq/llama-3.3-70b-versatile"
+    ]
+  },
+  "hallucination_categories": {
+    "invented": "Control-flow constructs present in the translation with no counterpart in the source.",
+    "missing": "Control-flow constructs present in the source that are absent from the translation.",
+    "depth_mismatch": "Constructs that exist in both programs but at different nesting depths.",
+    "lost_control_dep": "Control dependencies (condition-to-body relationships) not preserved across the translation.",
+    "invalid_type_transform": "Types or type-bearing operations translated in a way that changes the value domain."
+  },
+  "parsing": {
+    "parser": "tree-sitter (tree_sitter_c, tree_sitter_java)",
+    "failure_definition": "root_node.has_error on the parse tree",
+    "per_model": {
+      "groq_llama-3.1-8b-instant": {
+        "translations": 8,
+        "paired_with_source": 8,
+        "java_parse_failures": 0,
+        "java_parse_failure_rate": 0.0,
+        "c_parse_failures": 0
+      },
+      "groq_llama-3.3-70b-versatile": {
+        "translations": 200,
+        "paired_with_source": 200,
+        "java_parse_failures": 0,
+        "java_parse_failure_rate": 0.0,
+        "c_parse_failures": 0
+      },
+      "ollama_llama3.1_8b": {
+        "translations": 200,
+        "paired_with_source": 200,
+        "java_parse_failures": 5,
+        "java_parse_failure_rate": 0.025,
+        "c_parse_failures": 0
+      },
+      "ollama_qwen2.5-coder_7b": {
+        "translations": 200,
+        "paired_with_source": 200,
+        "java_parse_failures": 2,
+        "java_parse_failure_rate": 0.01,
+        "c_parse_failures": 0
+      }
+    }
+  },
+  "pipeline_attempts": {
+    "groq_llama-3.1-8b-instant": {
+      "total_programs": 8,
+      "flagged_after_tolerance": 48,
+      "successful_translations": 0,
+      "success_rate": 0.0,
+      "avg_attempts": 1.0,
+      "records_reaching_repair": 0,
+      "avg_verification_ms": 1.53
+    },
+    "groq_llama-3.3-70b-versatile": {
+      "total_programs": 200,
+      "flagged_after_tolerance": 486,
+      "successful_translations": 61,
+      "success_rate": 0.305,
+      "avg_attempts": 1.0,
+      "records_reaching_repair": 0,
+      "avg_verification_ms": 2.01
+    },
+    "ollama_llama3.1_8b": {
+      "total_programs": 200,
+      "flagged_after_tolerance": 951,
+      "successful_translations": 3,
+      "success_rate": 0.015,
+      "avg_attempts": 1.0,
+      "records_reaching_repair": 0,
+      "avg_verification_ms": 2.48
+    },
+    "ollama_qwen2.5-coder_7b": {
+      "total_programs": 200,
+      "flagged_after_tolerance": 1440,
+      "successful_translations": 7,
+      "success_rate": 0.035,
+      "avg_attempts": 1.0,
+      "records_reaching_repair": 0,
+      "avg_verification_ms": 2.64
+    }
+  },
+  "environment": {
+    "git_commit": "486e535d563311511d6c8a83fe46b0d2e9be8067",
+    "python_interpreter": "3.11.13",
+    "versions": {
+      "litellm": "1.83.0",
+      "tree-sitter": "0.25.2",
+      "tree-sitter-c": "0.24.2",
+      "tree-sitter-java": "0.23.5",
+      "networkx": "3.6.1"
+    }
+  }
+}

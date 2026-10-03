@@ -1,0 +1,32 @@
+{
+  "experiment": "independent_judge",
+  "judge_model": "ollama/llama3.1:8b",
+  "translator_model": "ollama/llama3.1:8b",
+  "summary": {
+    "total_programs": 1,
+    "total_hallucinations_found_by_judge": 0,
+    "avg_time_ms": 17610.9,
+    "parse_errors": 1,
+    "parse_error_rate": 1.0,
+    "comparison_vs_neuroast": {
+      "agree_flagged": 0,
+      "judge_missed": 0,
+      "judge_false_alarm": 0,
+      "agree_clean": 0,
+      "judge_recall_pct": 0,
+      "judge_recall_excl_parse_errors": 0
+    }
+  },
+  "records": [
+    {
+      "file": "1000_minimum_cost_to_merge_stones.c",
+      "judge_model": "ollama/llama3.1:8b",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 9,
+      "classification": "PARSE_ERROR",
+      "time_ms": 17610.9,
+      "explanation": "API_ERROR: litellm.APIConnectionError: OllamaException - 404 page not found\n"
+    }
+  ]
+}

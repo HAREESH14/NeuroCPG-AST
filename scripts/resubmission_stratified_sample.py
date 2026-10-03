@@ -101,6 +101,40 @@ def _read_code_snippet(filepath: Path, max_lines: int = 60) -> str:
     return "\n".join(lines)
 
 
+def _largest_remainder_allocate(
+    targets: list[str],
+    weights: dict[str, float],
+    total: int,
+) -> dict[str, int]:
+    """
+    Allocate ``total`` items across ``targets`` proportionally to ``weights``
+    so that the sum of allocations equals ``total`` exactly.
+
+    Uses the largest-remainder (Hamilton) method to handle rounding so the
+    final integer allocations sum to ``total`` without overshoot or shortfall.
+    """
+    if total <= 0 or not targets:
+        return {t: 0 for t in targets}
+
+    weight_sum = sum(max(weights.get(t, 0.0), 0.0) for t in targets)
+    if weight_sum <= 0:
+        # Fall back to equal share.
+        share = total // len(targets)
+        rem = total - share * len(targets)
+        return {t: share + (1 if i < rem else 0) for i, t in enumerate(targets)}
+
+    raw = {t: total * weights.get(t, 0.0) / weight_sum for t in targets}
+    floors = {t: int(raw[t]) for t in targets}
+    shortfall = total - sum(floors.values())
+    remainders = sorted(
+        ((t, raw[t] - floors[t]) for t in targets),
+        key=lambda kv: (-kv[1], kv[0]),
+    )
+    for t, _ in remainders[:shortfall]:
+        floors[t] += 1
+    return floors
+
+
 def stratified_sample(
     all_instances: list[HallucinationInstance],
     total_count: int,
@@ -110,9 +144,12 @@ def stratified_sample(
     Stratified sampling with oversampling of the Invented category.
 
     Strategy (per R2.2):
-      1. Allocate `invented_ratio` of the total budget to Invented
+      1. Allocate ``invented_ratio`` of the total budget to ``invented``
       2. Distribute the remainder proportionally across other categories
-      3. Within each category, sample uniformly across models
+      3. Cap each category at its available pool size and redistribute any
+         unused slots (e.g. when ``invented`` pool is smaller than the budget
+         or when proportional rounding would overshoot ``total_count``).
+      4. Within each category, sample uniformly across instances.
     """
     # Group by category
     by_category: dict[str, list[HallucinationInstance]] = {}
@@ -123,32 +160,99 @@ def stratified_sample(
     for cat, insts in sorted(by_category.items()):
         logger.info("  %-25s %5d (%.1f%%)", cat, len(insts), 100 * len(insts) / len(all_instances))
 
-    # Budget allocation
-    invented_budget = int(total_count * invented_ratio)
-    remaining_budget = total_count - invented_budget
-    other_categories = [c for c in by_category if c != "invented"]
-    other_total = sum(len(by_category[c]) for c in other_categories)
-
     sampled: list[HallucinationInstance] = []
+    budget_per_cat: dict[str, int] = {cat: 0 for cat in by_category}
 
-    # Sample Invented (oversampled)
+    # ── Allocate Invented (oversampled) ────────────────────────────
+    other_categories = [c for c in by_category if c != "invented"]
     invented_pool = by_category.get("invented", [])
-    n_invented = min(invented_budget, len(invented_pool))
-    sampled.extend(random.sample(invented_pool, n_invented))
-    logger.info("Sampled %d Invented (budget: %d)", n_invented, invented_budget)
+    requested_invented = int(total_count * invented_ratio)
+    n_invented = min(requested_invented, len(invented_pool))
+    budget_per_cat["invented"] = n_invented
+    logger.info(
+        "Sampled %d Invented (budget: %d, pool size: %d)",
+        n_invented, requested_invented, len(invented_pool),
+    )
 
-    # Sample remaining categories proportionally
-    for cat in other_categories:
-        pool = by_category[cat]
-        if other_total > 0:
-            cat_budget = max(5, int(remaining_budget * len(pool) / other_total))
+    # ── Allocate other categories proportionally to remaining budget ──
+    remaining_budget = total_count - n_invented
+
+    if other_categories and remaining_budget > 0:
+        # Population weights for non-invented categories.
+        weights = {c: float(len(by_category[c])) for c in other_categories}
+        # Ensure every other category gets at least 1 if it has any instances
+        # and there is budget; otherwise small categories get 0.
+        min_per_cat = {c: 1 if len(by_category[c]) > 0 else 0 for c in other_categories}
+        min_total = sum(min_per_cat.values())
+
+        if min_total > remaining_budget:
+            # Not enough budget for everyone — just take one from each category
+            # until the budget runs out.
+            alloc = {c: 0 for c in other_categories}
+            cats_sorted = sorted(other_categories, key=lambda c: -len(by_category[c]))
+            leftover = remaining_budget
+            for c in cats_sorted:
+                if leftover <= 0:
+                    break
+                if min_per_cat[c] > 0 and leftover > 0:
+                    alloc[c] = 1
+                    leftover -= 1
         else:
-            cat_budget = 5
-        n_cat = min(cat_budget, len(pool))
-        sampled.extend(random.sample(pool, n_cat))
-        logger.info("Sampled %d %s (budget: %d)", n_cat, cat, cat_budget)
+            # Give every category its minimum, then distribute the rest
+            # proportionally using the largest-remainder method.
+            leftover = remaining_budget - min_total
+            post_min_weights = {c: weights[c] for c in other_categories}
+            extra_alloc = _largest_remainder_allocate(
+                other_categories, post_min_weights, leftover,
+            )
+            alloc = {c: min_per_cat[c] + extra_alloc[c] for c in other_categories}
+
+        # Cap each category at its pool size; track any surplus to redistribute.
+        surplus = 0
+        for c in other_categories:
+            pool_size = len(by_category[c])
+            planned = min(alloc[c], pool_size)
+            surplus += alloc[c] - planned
+            budget_per_cat[c] = planned
+
+        # Redistribute surplus (if any) to categories that still have headroom.
+        if surplus > 0:
+            eligible = [c for c in other_categories if budget_per_cat[c] < len(by_category[c])]
+            while surplus > 0 and eligible:
+                # Proportional redistribution across eligible categories.
+                weights_eligible = {c: float(len(by_category[c]) - budget_per_cat[c]) for c in eligible}
+                extra = _largest_remainder_allocate(eligible, weights_eligible, surplus)
+                allocated_this_round = 0
+                new_eligible = []
+                for c in eligible:
+                    room = len(by_category[c]) - budget_per_cat[c]
+                    take = min(extra[c], room)
+                    budget_per_cat[c] += take
+                    allocated_this_round += take
+                    if budget_per_cat[c] < len(by_category[c]):
+                        new_eligible.append(c)
+                surplus -= allocated_this_round
+                eligible = new_eligible
+
+        for c in other_categories:
+            logger.info(
+                "Sampled %d %s (pool size: %d)",
+                budget_per_cat[c], c, len(by_category[c]),
+            )
+
+    # ── Draw the actual samples ─────────────────────────────────────
+    for cat, n in budget_per_cat.items():
+        pool = by_category.get(cat, [])
+        if n > 0 and pool:
+            take = min(n, len(pool))
+            sampled.extend(random.sample(pool, take))
 
     random.shuffle(sampled)
+
+    # Final safety: if rounding still overshot, truncate.
+    if len(sampled) > total_count:
+        sampled = sampled[:total_count]
+
     return sampled
 
 

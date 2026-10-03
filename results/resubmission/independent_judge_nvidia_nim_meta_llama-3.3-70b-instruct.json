@@ -1,0 +1,1022 @@
+{
+  "experiment": "independent_judge",
+  "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+  "translator_model": "ollama/llama3.1:8b",
+  "summary": {
+    "total_programs": 100,
+    "total_hallucinations_found_by_judge": 0,
+    "avg_time_ms": 61.8,
+    "parse_errors": 100,
+    "parse_error_rate": 1.0,
+    "comparison_vs_neuroast": {
+      "agree_flagged": 0,
+      "judge_missed": 0,
+      "judge_false_alarm": 0,
+      "agree_clean": 0,
+      "judge_recall_pct": 0,
+      "judge_recall_excl_parse_errors": 0
+    }
+  },
+  "records": [
+    {
+      "file": "1000_minimum_cost_to_merge_stones.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 9,
+      "classification": "PARSE_ERROR",
+      "time_ms": 350.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1013_partition_array_into_three_parts_with_equal_sum.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1014_best_sightseeing_pair.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1015_smallest_integer_divisible_by_k.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1018_binary_prefix_divisible_by_5.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 54.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1019_next_greater_node_in_linked_list.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1020_number_of_enclaves.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1024_video_stitching.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1030_matrix_cells_in_distance_order.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1032_stream_of_characters.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 11,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1033_moving_stones_until_consecutive.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 51.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1035_uncrossed_lines.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1037_valid_boomerang.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1046_last_stone_weight.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1048_longest_string_chain.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 80.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1052_grumpy_bookstore_owner.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1053_previous_permutation_with_one_swap.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1054_distant_barcodes.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 53.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1055_shortest_way_to_form_string.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 9,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1056_confusing_number.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 207.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "105_construct_binary_tree_from_preorder_and_inorder_traversal.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1060_missing_element_in_sorted_array.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1062_longest_repeating_substring.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1063_number_of_valid_subarrays.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1064_fixed_point.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 7,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1067_digit_count_in_range.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 54.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "106_construct_binary_tree_from_inorder_and_postorder_traversal.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1085_sum_of_digits_in_the_minimum_number.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1086_high_five.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1089_duplicate_zeros.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1099_two_sum_less_than_k.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 54.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "10_regular_expression_matching.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 2,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1103_distribute_candies_to_people.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 7,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1105_filling_bookcase_shelves.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1118_number_of_days_in_a_month.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 12,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1121_divide_array_into_increasing_sequences.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1124_longest_well_performing_interval.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1133_largest_unique_number.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 2,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1134_armstrong_number.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 7,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1139_largest_1_bordered_square.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 53.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1143_longest_common_subsequence.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 0,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1144_decrease_elements_to_make_array_zigzag.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1150_check_if_a_number_is_majority_element_in_a_sorted_array.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1151_minimum_swaps_to_group_all_1s_together.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 6,
+      "classification": "PARSE_ERROR",
+      "time_ms": 54.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1153_string_transforms_into_another_string.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 23,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1154_day_of_the_year.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1155_number_of_dice_rolls_with_target_sum.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 60.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "115_distinct_subsequences.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 53.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1163_last_substring_in_lexicographical_order.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1166_design_file_system.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 3,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1168_optimize_water_distribution_in_a_village.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1175_prime_arrangements.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 3,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1176_diet_plan_performance.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.4,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1180_count_substrings_with_only_one_distinct_letter.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 2,
+      "classification": "PARSE_ERROR",
+      "time_ms": 60.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1183_maximum_number_of_ones.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 11,
+      "classification": "PARSE_ERROR",
+      "time_ms": 69.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1191_k_concatenation_maximum_sum.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "11_container_with_most_water.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1201_ugly_number_iii.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1208_get_equal_substrings_within_budget.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 2,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1210_minimum_moves_to_reach_target_with_rotations.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1217_minimum_cost_to_move_chips_to_the_same_position.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 19,
+      "classification": "PARSE_ERROR",
+      "time_ms": 59.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1218_longest_arithmetic_subsequence_of_given_difference.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1219_path_with_maximum_gold.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 9,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1221_split_a_string_in_balanced_strings.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "122_best_time_to_buy_and_sell_stock_ii.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1231_divide_chocolate.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 11,
+      "classification": "PARSE_ERROR",
+      "time_ms": 53.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1236_web_crawler.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1250_check_if_it_is_a_good_array.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 0,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1259_handshakes_that_dont_cross.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1260_shift_2d_grid.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 9,
+      "classification": "PARSE_ERROR",
+      "time_ms": 54.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1261_find_elements_in_a_contaminated_binary_tree.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1263_minimum_moves_to_move_a_box_to_their_target_location.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1269_number_of_ways_to_stay_in_the_same_place_after_some_steps.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 53.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1273_delete_tree_nodes.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 10,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1275_find_winner_on_a_tic_tac_toe_game.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 3,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1276_number_of_burgers_with_no_waste_of_ingredients.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1284_minimum_number_of_flips_to_convert_binary_matrix_to_zero_matrix.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.7,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1286_iterator_for_combination.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 60.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1287_element_appearing_more_than_25_in_sorted_array.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1288_remove_covered_intervals.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 6,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1289_minimum_falling_path_sum_ii.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 7,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1295_find_numbers_with_even_number_of_digits.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1307_verbal_arithmetic_puzzle.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1310_xor_queries_of_a_subarray.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 60.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1317_convert_integer_to_the_sum_of_two_no_zero_integers.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1318_minimum_flips_to_make_a_or_b_equal_to_c.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1329_sort_the_matrix_diagonally.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "132_palindrome_partitioning_ii.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 66.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1330_reverse_subarray_to_maximize_array_value.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 16,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.2,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1332_remove_palindromic_subsequences.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1335_minimum_difficulty_of_a_job_schedule.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1339_maximum_product_of_splitted_binary_tree.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 1,
+      "classification": "PARSE_ERROR",
+      "time_ms": 58.9,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1343_number_of_sub_arrays_of_size_k_and_average_greater_than_or_equal_to_threshold.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.8,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "134_gas_station.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1357_apply_discount_every_n_orders.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 55.6,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1359_count_all_valid_pickup_and_delivery_options.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 10,
+      "classification": "PARSE_ERROR",
+      "time_ms": 52.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "135_candy.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.0,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1362_closest_divisors.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 8,
+      "classification": "PARSE_ERROR",
+      "time_ms": 61.5,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "1365_how_many_numbers_are_smaller_than_the_current_number.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 5,
+      "classification": "PARSE_ERROR",
+      "time_ms": 56.3,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    },
+    {
+      "file": "136_single_number.c",
+      "judge_model": "nvidia_nim/meta/llama-3.3-70b-instruct",
+      "judge_hallucinations": -1,
+      "is_equivalent": null,
+      "neuroast_hallucinations": 4,
+      "classification": "PARSE_ERROR",
+      "time_ms": 57.1,
+      "explanation": "API_ERROR: litellm.AuthenticationError: AuthenticationError: Nvidia_nimException - Error code: 401 - {'status': 401, 'title': 'Unauthorized', 'detail': 'Authentication failed'}"
+    }
+  ]
+}

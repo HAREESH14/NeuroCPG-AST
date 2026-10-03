@@ -49,7 +49,16 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ── Configuration ──────────────────────────────────────────────────────────
-DEFAULT_MODEL = "gemini/gemini-2.5-pro"
+DEFAULT_MODEL = "meta/llama-3.3-70b-instruct"
+
+# Default NVIDIA NIM endpoint (override via --nvidia-url or NVIDIA_API_BASE).
+DEFAULT_NVIDIA_URL = "https://integrate.api.nvidia.com/v1"
+
+# Resolve NVIDIA API key once at import time so litellm picks it up.
+_NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY") or os.environ.get("NVIDIA_NIM_API_KEY")
+if _NVIDIA_API_KEY:
+    os.environ["NVIDIA_API_KEY"] = _NVIDIA_API_KEY
+NVIDIA_API_BASE = os.environ.get("NVIDIA_API_BASE", DEFAULT_NVIDIA_URL)
 
 # ── Prompts ────────────────────────────────────────────────────────────────
 
@@ -181,9 +190,15 @@ def annotate_single(
     row: dict[str, str],
     annotator: str,
     model: str,
+    url: str = DEFAULT_NVIDIA_URL,
 ) -> dict[str, str]:
     """
-    Send one hallucination instance to Gemini Pro for annotation.
+    Send one hallucination instance to an LLM judge for annotation.
+
+    Defaults to the NVIDIA NIM endpoint at ``https://integrate.api.nvidia.com/v1``.
+    If ``model`` is the raw NVIDIA model id (e.g. ``meta/llama-3.3-70b-instruct``),
+    we route via litellm's ``nvidia_nim/`` provider and attach the API key from
+    ``NVIDIA_API_KEY`` (or ``NVIDIA_NIM_API_KEY``).
     """
     prompt_template = ANNOTATOR_A_PROMPT if annotator == "A" else ANNOTATOR_B_PROMPT
 
@@ -197,15 +212,39 @@ def annotate_single(
     )
 
     try:
-        response = litellm.completion(
-            model=model,
-            messages=[
+        completion_kwargs: dict = {
+            "model": model,
+            "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
-            timeout=120,
-            temperature=0.1,  # Low temperature for consistency
+            "timeout": 120,
+            "temperature": 0.1,  # Low temperature for consistency
+        }
+
+        # Route NVIDIA NIM calls correctly. litellm expects ``api_base`` (not
+        # ``url``) for custom OpenAI-compatible endpoints and an explicit
+        # ``api_key`` for authenticated hosts.
+        is_nvidia_model = (
+            model.startswith("nvidia_nim/")
+            or model.startswith("nvidia/")
+            or model == "meta/llama-3.3-70b-instruct"
+            or "nvidia" in (url or "")
         )
+        if is_nvidia_model:
+            completion_kwargs["api_base"] = url or NVIDIA_API_BASE
+            nvidia_key = (
+                os.environ.get("NVIDIA_API_KEY")
+                or os.environ.get("NVIDIA_NIM_API_KEY")
+            )
+            if nvidia_key:
+                completion_kwargs["api_key"] = nvidia_key
+            # If the user supplied the raw NVIDIA model id without a provider
+            # prefix, attach the ``nvidia_nim/`` prefix so litellm routes it.
+            if model == "meta/llama-3.3-70b-instruct":
+                completion_kwargs["model"] = f"nvidia_nim/{model}"
+
+        response = litellm.completion(**completion_kwargs)
 
         raw = response.choices[0].message.content or ""
         parsed = _extract_json(raw)
@@ -297,7 +336,7 @@ def run_annotation(
             i + 1, len(rows), row_id, row["model"], row["source_file"], row["category"],
         )
 
-        annotation = annotate_single(row, annotator, model)
+        annotation = annotate_single(row, annotator, model,url)
 
         merged = dict(row)
         merged.update(annotation)
